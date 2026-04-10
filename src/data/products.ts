@@ -25,7 +25,7 @@ export const hotProducts: Product[] = [
     tagline: '榨油界的老实人，不添加任何废话',
     points: 1580,
     originalPoints: 1900,
-    originalPrice: 128,
+    originalPrice: 158,
     savings: 33,
     image: 'https://images.pexels.com/photos/33783/olive-oil-salad-dressing-cooking-olive.jpg?auto=compress&cs=tinysrgb&w=400',
     category: '美食',
