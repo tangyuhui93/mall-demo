@@ -1,70 +1,58 @@
-import { ChevronRight, Zap } from 'lucide-react';
+import { ChevronRight, Sparkles, Gift } from 'lucide-react';
 
 export default function PointsCard() {
   return (
-    <div className="mx-4 mt-3 mb-5 space-y-3">
-      <div className="relative rounded-[24px] overflow-hidden shadow-xl">
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #FF3B30 0%, #E62E2E 100%)' }} />
-        <div className="absolute top-0 right-0 w-56 h-56 rounded-full bg-white/10 -translate-y-1/3 translate-x-1/4" />
-        <div className="absolute bottom-0 left-0 w-40 h-40 rounded-full bg-white/8 translate-y-1/2 -translate-x-1/4" />
-        <div className="absolute top-3 right-12 w-16 h-16 rounded-full bg-white/5" />
+    <div className="mx-4 mt-1 mb-5 space-y-3">
+      <div className="relative rounded-3xl overflow-hidden shadow-lg">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#FF3B30] via-[#FF5C30] to-[#FF8C00]" />
+        <div className="absolute top-0 right-0 w-48 h-48 rounded-full bg-white/10 -translate-y-1/2 translate-x-1/4" />
+        <div className="absolute bottom-0 left-0 w-32 h-32 rounded-full bg-white/8 translate-y-1/2 -translate-x-1/4" />
+        <div className="absolute top-4 right-6 opacity-40">
+          <Sparkles size={40} className="text-yellow-200" />
+        </div>
 
-        <div className="relative p-5 pb-4">
+        <div className="relative p-5">
           <div className="flex items-start justify-between">
             <div>
-              <p className="text-white/80 text-xs font-semibold tracking-widest mb-2 uppercase">我的积分</p>
-              <div className="flex items-end gap-2">
-                <span className="text-[52px] font-black text-white tracking-tight leading-none">10,380</span>
-                <span className="text-white/90 text-base mb-1.5 font-bold">分</span>
+              <p className="text-red-100 text-xs font-medium tracking-widest mb-1">我的积分</p>
+              <div className="flex items-end gap-1.5">
+                <span className="text-5xl font-black text-white tracking-tight leading-none">10,380</span>
+                <span className="text-red-100 text-sm mb-1 font-medium">分</span>
               </div>
             </div>
-            <button
-              className="mt-1 flex items-center gap-1.5 rounded-2xl px-4 py-2 text-[#CC0000] text-xs font-black shadow-lg active:scale-95 transition-transform"
-              style={{ background: '#FFEB3B' }}
-            >
-              <Zap size={13} fill="#CC0000" />
+            <button className="mt-1 flex items-center gap-1 bg-white/20 rounded-full px-3 py-1.5 text-white text-xs font-semibold backdrop-blur-sm hover:bg-white/30 transition-colors">
+              <Gift size={12} />
               赚积分
             </button>
           </div>
 
-          <div className="mt-4 flex items-center gap-2 rounded-2xl px-3.5 py-2.5" style={{ background: 'rgba(255,255,255,0.15)' }}>
-            <div className="w-2 h-2 rounded-full bg-[#FFEB3B] animate-pulse flex-shrink-0" />
-            <p className="text-white/90 text-xs flex-1">
-              积分将于 <span className="font-black text-[#FFEB3B]">2025年12月31日</span> 到期，请尽快使用
+          <div className="mt-4 flex items-center gap-1.5 bg-white/15 rounded-2xl px-3 py-2">
+            <div className="w-1.5 h-1.5 rounded-full bg-yellow-300 animate-pulse" />
+            <p className="text-red-50 text-xs flex-1">
+              积分将于 <span className="font-bold text-white">2025年12月31日</span> 到期
             </p>
-            <ChevronRight size={13} className="text-white/70 flex-shrink-0" />
+            <ChevronRight size={13} className="text-red-100" />
           </div>
         </div>
       </div>
 
-      <div className="relative rounded-[20px] overflow-hidden shadow-lg bg-white">
-        <div className="absolute right-0 top-0 bottom-0 w-1/2" style={{ background: 'linear-gradient(to left, #FFF3E0, transparent)' }} />
+      <div className="relative rounded-3xl overflow-hidden shadow-md bg-white border border-[#FFE8D0]">
+        <div className="absolute right-0 top-0 bottom-0 w-2/5 bg-gradient-to-l from-[#FFF3E0] to-transparent" />
         <div className="relative flex items-center gap-4 p-4">
           <div className="flex-1">
-            <div className="flex items-center gap-1.5 mb-2">
-              <span
-                className="text-white text-[10px] font-black px-2.5 py-1 rounded-lg"
-                style={{ background: 'linear-gradient(90deg, #FF3B30, #FF6B30)' }}
-              >
+            <div className="flex items-center gap-1.5 mb-1.5">
+              <span className="bg-gradient-to-r from-[#FF3B30] to-[#FF8C00] text-white text-[10px] font-black px-2 py-0.5 rounded-full">
                 9折兑换
               </span>
-              <span
-                className="text-white text-[10px] font-black px-2.5 py-1 rounded-lg"
-                style={{ background: 'linear-gradient(90deg, #FF8C00, #FFB800)' }}
-              >
-                限时优惠
-              </span>
+              <span className="text-[#FF8C00] text-[10px] font-semibold">限时优惠</span>
             </div>
-            <p className="text-[#1A1A1A] font-black text-[15px] leading-snug">农家土猪腊肉礼盒 500g</p>
+            <p className="text-[#1A1A1A] font-bold text-base">农家土猪腊肉礼盒 500g</p>
             <p className="text-[#999] text-xs mt-0.5">柴火熏制 · 产地直发</p>
-            <button
-              className="mt-3 text-white text-xs font-black px-5 py-2 rounded-xl shadow-lg active:scale-95 transition-transform"
-              style={{ background: 'linear-gradient(90deg, #FF3B30, #FF5722)' }}
-            >
+            <button className="mt-3 bg-gradient-to-r from-[#FF3B30] to-[#FF6B30] text-white text-xs font-bold px-5 py-2 rounded-full shadow-md shadow-red-200 hover:opacity-90 transition-opacity active:scale-95">
               立即兑换
             </button>
           </div>
-          <div className="w-[88px] h-[88px] rounded-2xl overflow-hidden flex-shrink-0 shadow-md">
+          <div className="w-24 h-24 rounded-2xl overflow-hidden flex-shrink-0 shadow-md">
             <img
               src="https://images.pexels.com/photos/1927385/pexels-photo-1927385.jpeg?auto=compress&cs=tinysrgb&w=200"
               alt="农家土猪腊肉礼盒"

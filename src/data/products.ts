@@ -140,6 +140,16 @@ export const allProducts: Product[] = [
     tagColor: 'orange',
   },
   {
+    id: 'p4',
+    name: '云南火腿月饼礼盒 8枚',
+    description: '宣威火腿 酥皮现烤',
+    points: 760,
+    image: 'https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=300',
+    category: '小吃',
+    tag: '节日礼盒',
+    tagColor: 'pink',
+  },
+  {
     id: 'p5',
     name: '新鲜竹笋干 250g',
     description: '高山毛竹 自然晾晒',
@@ -184,7 +194,7 @@ export const allProducts: Product[] = [
 ];
 
 export const tabs: TabItem[] = [
-  { id: 'all', label: '全部' },
+  { id: 'all', label: '全部积分' },
   { id: 'recommend', label: '推荐' },
   { id: 'farm', label: '农场' },
   { id: 'snack', label: '小吃' },
