@@ -16,7 +16,7 @@ function App() {
   const [activeTab, setActiveTab] = useState<Tab>('home');
 
   return (
-    <div className="min-h-screen bg-[#FFE8D0]">
+    <div className="min-h-screen bg-[#fff]">
       <div className="max-w-[390px] mx-auto min-h-screen bg-[#FFE8D0] relative overflow-x-hidden shadow-2xl">
         <StatusBar />
         {activeTab === 'home' && (
