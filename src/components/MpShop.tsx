@@ -165,7 +165,7 @@ export default function MpShop() {
         <div className="bg-[#FFF0E0] border border-[#F5DECA] rounded-xl px-3 py-2 flex items-center gap-2 mb-2.5">
           <Clock size={13} className="text-[#E06030] flex-shrink-0" />
           <p className="text-[#C05030] text-xs font-medium flex-1">
-            您有 <span className="font-bold">2,400</span> 分将于{' '}
+            您有 <span className="font-bold">2,400</span> 积分将于{' '}
             <span className="font-bold">30天</span> 后过期，快去兑换好物！
           </p>
         </div>
