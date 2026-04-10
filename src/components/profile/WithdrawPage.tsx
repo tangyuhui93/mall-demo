@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ChevronLeft, AlertTriangle, Info, ArrowRight, Star } from 'lucide-react';
+import { ChevronLeft, AlertTriangle, Info, ArrowRight, Leaf, ShoppingBag } from 'lucide-react';
 
 interface WithdrawPageProps {
   onBack: () => void;
@@ -62,7 +62,7 @@ export default function WithdrawPage({ onBack, onGoExchange }: WithdrawPageProps
                 {[
                   '提现将收取 2% 手续费（如提现¥32.8，实际到账¥32.14）',
                   '到账时间 3-5 个工作日',
-                  '积分兑换商品 0手续费，且部分商品享5折优惠',
+                  '积分兑换农家直供好物，0手续费、原产地品质保障',
                 ].map((tip, i) => (
                   <div key={i} className="flex items-start gap-1.5">
                     <span className="text-[#E65100] text-xs font-bold flex-shrink-0">·</span>
@@ -124,27 +124,39 @@ export default function WithdrawPage({ onBack, onGoExchange }: WithdrawPageProps
       {parseFloat(amount) > 0 && (
         <div className="mx-4 mb-4">
           <div
-            className="rounded-2xl p-4 border"
+            className="rounded-2xl p-4 border overflow-hidden relative"
             style={{
-              background: 'linear-gradient(135deg, #FFEBEE 0%, #FFF3E0 100%)',
-              borderColor: '#FFCDD2',
+              background: 'linear-gradient(135deg, #E8F5E9 0%, #F1F8E9 100%)',
+              borderColor: '#A5D6A7',
             }}
           >
-            <div className="flex items-start gap-2.5">
-              <Star size={15} className="text-[#D32F2F] mt-0.5 flex-shrink-0" fill="#D32F2F" />
+            <div className="absolute -right-4 -top-4 w-24 h-24 rounded-full bg-green-100/60" />
+            <div className="absolute -right-2 -bottom-6 w-16 h-16 rounded-full bg-green-200/40" />
+            <div className="flex items-start gap-2.5 relative">
+              <Leaf size={15} className="text-[#2E7D32] mt-0.5 flex-shrink-0" fill="#2E7D32" />
               <div className="flex-1">
-                <p className="text-[#212529] text-xs font-bold mb-1">换个方式更省钱</p>
-                <p className="text-[#6C757D] text-xs leading-relaxed mb-2.5">
-                  您选择提现 ¥{parseFloat(amount).toFixed(2)}，将损失{' '}
-                  <span className="font-bold text-[#C62828]">¥{fee.toFixed(2)}</span> 手续费。
-                  用同等积分兑换商品，<span className="font-bold text-[#2E7D32]">节省 ¥{fee.toFixed(2)}</span>。
+                <p className="text-[#1B5E20] text-xs font-bold mb-1">积分可以换到更好的东西</p>
+                <p className="text-[#388E3C] text-xs leading-relaxed mb-3">
+                  积分直接兑换<span className="font-bold text-[#1B5E20]">农家直供优选好物</span>，新鲜直达不中转。现有<span className="font-bold text-[#1B5E20]">有机蔬菜礼包、山地蜂蜜、冷压果汁</span>等热门商品，比提现现金更实惠！
                 </p>
+                <div className="flex gap-2 mb-3">
+                  {[
+                    { label: '有机蔬菜礼包', pts: '280分' },
+                    { label: '山地蜂蜜500g', pts: '350分' },
+                    { label: '冷压果汁6瓶', pts: '420分' },
+                  ].map((item) => (
+                    <div key={item.label} className="flex-1 bg-white/70 rounded-xl px-2 py-1.5 text-center border border-green-200/60">
+                      <p className="text-[#1B5E20] text-[10px] font-semibold leading-tight">{item.label}</p>
+                      <p className="text-[#43A047] text-[10px] font-bold mt-0.5">{item.pts}</p>
+                    </div>
+                  ))}
+                </div>
                 <button
                   onClick={onGoExchange}
-                  className="flex items-center gap-1.5 bg-[#D32F2F] text-white text-xs font-bold px-4 py-2 rounded-xl active:opacity-80"
+                  className="flex items-center gap-1.5 bg-[#2E7D32] text-white text-xs font-bold px-4 py-2 rounded-xl active:opacity-80"
                 >
-                  去兑换商品，省{' '}
-                  <span className="text-[#FCBF49]">¥{fee.toFixed(2)}</span>
+                  <ShoppingBag size={12} />
+                  去看看优选好物
                   <ArrowRight size={12} />
                 </button>
               </div>
@@ -192,9 +204,9 @@ export default function WithdrawPage({ onBack, onGoExchange }: WithdrawPageProps
           确认提现（扣除2%手续费）
         </button>
         <p className="text-center text-[#ADB5BD] text-xs mt-3">
-          提现不如兑换划算 ·{' '}
-          <button onClick={onGoExchange} className="text-[#D32F2F] font-medium">
-            查看兑换好物
+          农家直供好物等你来换 ·{' '}
+          <button onClick={onGoExchange} className="text-[#2E7D32] font-medium">
+            查看优选兑换
           </button>
         </p>
       </div>
