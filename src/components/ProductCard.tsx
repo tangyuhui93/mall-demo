@@ -77,7 +77,7 @@ export default function ProductCard({ product, variant = 'default' }: ProductCar
         )}
         <div className="p-3">
           <p className="text-[#212529] font-bold text-sm leading-snug truncate">{product.name}</p>
-          <p className="text-[#FFC107] text-xs font-medium mt-0.5 leading-snug line-clamp-2" style={{ minHeight: '2.6em' }}>
+          <p className="text-[#B45309] text-xs font-medium mt-0.5 leading-snug line-clamp-2" style={{ minHeight: '2.6em' }}>
             {product.tagline ? `"${product.tagline}"` : ''}
           </p>
           <div className="mt-2 flex items-center justify-between gap-1">
@@ -131,7 +131,7 @@ export default function ProductCard({ product, variant = 'default' }: ProductCar
       <div className="p-3 flex flex-col flex-1">
         <div className="flex-1">
           {product.tagline && (
-            <p className="text-[#FFC107] text-xs font-medium mb-0.5 leading-snug">"{product.tagline}"</p>
+            <p className="text-[#B45309] text-xs font-medium mb-0.5 leading-snug">"{product.tagline}"</p>
           )}
           <p className="text-[#212529] font-bold text-sm leading-snug truncate">{product.name}</p>
         </div>
