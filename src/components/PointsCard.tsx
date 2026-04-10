@@ -10,23 +10,7 @@ export default function PointsCard() {
         <div className="absolute top-4 right-6 opacity-40">
           <Sparkles size={40} className="text-yellow-200" />
         </div>
-
-        <div className="relative p-5">
-          <div className="flex items-start justify-between">
-            <button className="mt-1 flex items-center gap-1 bg-white/20 rounded-full px-3 py-1.5 text-white text-xs font-semibold backdrop-blur-sm hover:bg-white/30 transition-colors">
-              <Gift size={12} />
-              赚积分
-            </button>
-          </div>
-
-          <div className="mt-4 flex items-center gap-1.5 bg-white/15 rounded-2xl px-3 py-2">
-            <div className="w-1.5 h-1.5 rounded-full bg-yellow-300 animate-pulse" />
-            <p className="text-red-50 text-xs flex-1">
-              积分将于 <span className="font-bold text-white">2025年12月31日</span> 到期
-            </p>
-            <ChevronRight size={13} className="text-red-100" />
-          </div>
-        </div>
+ 
       </div>
 
       <div className="relative rounded-3xl overflow-hidden shadow-md bg-white border border-[#FFE8D0]">
