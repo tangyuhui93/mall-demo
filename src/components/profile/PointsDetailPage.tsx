@@ -36,7 +36,7 @@ const exchangeProducts = [
     points: 200,
     originalPoints: 200,
     tag: '好评热门',
-    tagColor: '#1565C0',
+    tagColor: '#D32F2F',
     stock: 156,
     image: 'https://images.pexels.com/photos/5632398/pexels-photo-5632398.jpeg?auto=compress&cs=tinysrgb&w=200',
     worth: '¥20',
@@ -102,8 +102,8 @@ export default function PointsDetailPage({ onBack, onWithdraw }: PointsDetailPag
           </div>
           <div className="flex items-center justify-center gap-3">
             <div className="flex items-center gap-1 bg-white/15 rounded-full px-3 py-1">
-              <Star size={11} className="text-[#FCBF49]" fill="#FCBF49" />
-              <span className="text-white text-xs">可抵 <span className="font-bold text-[#FCBF49]">¥32.8</span></span>
+              <Star size={11} className="text-[#D32F2F]" fill="#D32F2F" />
+              <span className="text-white text-xs">可抵 <span className="font-bold text-white">¥32.8</span></span>
             </div>
             <div className="flex items-center gap-1 bg-red-900/40 border border-red-400/30 rounded-full px-3 py-1">
               <div className="w-1.5 h-1.5 rounded-full bg-[#FF6B6B] animate-pulse" />
@@ -122,22 +122,20 @@ export default function PointsDetailPage({ onBack, onWithdraw }: PointsDetailPag
           <div className="grid grid-cols-3 gap-2.5">
             <button
               onClick={() => setShowLottery(true)}
-              className="flex flex-col items-center gap-2 p-3 rounded-xl active:scale-95 transition-transform"
-              style={{ background: 'linear-gradient(135deg, #FFF8E1 0%, #FFF3E0 100%)', border: '1px solid #FFE082' }}
+              className="flex flex-col items-center gap-2 p-3 rounded-xl active:scale-95 transition-transform bg-[#FFF0F0] border border-[#FFCDD2]"
             >
-              <div className="w-10 h-10 rounded-xl bg-[#FCBF49]/20 flex items-center justify-center">
-                <Gift size={20} className="text-[#E65100]" />
+              <div className="w-10 h-10 rounded-xl bg-[#D32F2F]/10 flex items-center justify-center">
+                <Gift size={20} className="text-[#D32F2F]" />
               </div>
               <div className="text-center">
                 <p className="text-[#212529] text-xs font-bold">幸运抽奖</p>
-                <p className="text-[#E65100] text-[10px] font-semibold">今日3次</p>
+                <p className="text-[#D32F2F] text-[10px] font-semibold">今日3次</p>
               </div>
             </button>
 
             <button
               onClick={() => setActiveSection('exchange')}
-              className="flex flex-col items-center gap-2 p-3 rounded-xl active:scale-95 transition-transform"
-              style={{ background: 'linear-gradient(135deg, #FFEBEE 0%, #FFF3E0 100%)', border: '1px solid #FFCDD2' }}
+              className="flex flex-col items-center gap-2 p-3 rounded-xl active:scale-95 transition-transform bg-[#FFF0F0] border border-[#FFCDD2]"
             >
               <div className="w-10 h-10 rounded-xl bg-[#D32F2F]/10 flex items-center justify-center">
                 <ShoppingBag size={20} className="text-[#D32F2F]" />
@@ -148,13 +146,16 @@ export default function PointsDetailPage({ onBack, onWithdraw }: PointsDetailPag
               </div>
             </button>
 
-            <button className="flex flex-col items-center gap-2 p-3 rounded-xl active:scale-95 transition-transform bg-[#F8F9FA] border border-[#E9ECEF]">
-              <div className="w-10 h-10 rounded-xl bg-[#1565C0]/10 flex items-center justify-center">
-                <TrendingUp size={20} className="text-[#1565C0]" />
+            <button
+              onClick={() => setActiveSection('records')}
+              className="flex flex-col items-center gap-2 p-3 rounded-xl active:scale-95 transition-transform bg-[#F5F5F5] border border-[#E8E8E8]"
+            >
+              <div className="w-10 h-10 rounded-xl bg-[#999]/10 flex items-center justify-center">
+                <TrendingUp size={20} className="text-[#555]" />
               </div>
               <div className="text-center">
                 <p className="text-[#212529] text-xs font-bold">积分明细</p>
-                <p className="text-[#6C757D] text-[10px]">收支记录</p>
+                <p className="text-[#999] text-[10px]">收支记录</p>
               </div>
             </button>
           </div>
@@ -162,17 +163,17 @@ export default function PointsDetailPage({ onBack, onWithdraw }: PointsDetailPag
       </div>
 
       <div className="mx-4 mb-4">
-        <div className="bg-[#FFF8E1] rounded-2xl p-3.5 border border-[#FFE082]">
+        <div className="bg-[#FFF0F0] rounded-2xl p-3.5 border border-[#FFCDD2]">
           <div className="flex items-start gap-3">
-            <Zap size={16} className="text-[#E65100] mt-0.5 flex-shrink-0" />
+            <Zap size={16} className="text-[#D32F2F] mt-0.5 flex-shrink-0" />
             <div>
-              <p className="text-[#7B3F00] text-xs font-bold mb-0.5">积分即将过期提醒</p>
-              <p className="text-[#A0522D] text-xs leading-relaxed">
-                您有 <span className="font-bold text-[#C62828]">320分</span> 将在12天后自动清零。用积分兑换商品比提现划算——<span className="font-bold">提现需扣2%手续费</span>，积分兑换无任何费用。
+              <p className="text-[#C62828] text-xs font-bold mb-0.5">积分即将过期提醒</p>
+              <p className="text-[#D32F2F]/80 text-xs leading-relaxed">
+                您有 <span className="font-bold text-[#C62828]">320分</span> 将在12天后自动清零。积分兑换商品无任何手续费，<span className="font-bold">提现需扣2%手续费</span>。
               </p>
               <button
                 onClick={() => setActiveSection('exchange')}
-                className="mt-2 bg-[#E65100] text-white text-[11px] font-bold px-4 py-1.5 rounded-lg active:opacity-80"
+                className="mt-2 bg-[#D32F2F] text-white text-[11px] font-bold px-4 py-1.5 rounded-lg active:opacity-80"
               >
                 立即兑换，不浪费
               </button>
@@ -232,7 +233,7 @@ export default function PointsDetailPage({ onBack, onWithdraw }: PointsDetailPag
                   <p className="text-[#212529] text-sm font-semibold truncate">{product.name}</p>
                   <p className="text-[#ADB5BD] text-xs mt-0.5">市场价值 {product.worth}</p>
                   <div className="flex items-baseline gap-1.5 mt-1">
-                    <Star size={11} className="text-[#FCBF49]" fill="#FCBF49" />
+                    <Star size={11} className="text-[#D32F2F]" fill="#D32F2F" />
                     <span className="text-[#D32F2F] text-base font-black">{product.points.toLocaleString()}</span>
                     <span className="text-[#ADB5BD] text-xs">积分</span>
                     {product.originalPoints !== product.points && (
@@ -264,13 +265,13 @@ export default function PointsDetailPage({ onBack, onWithdraw }: PointsDetailPag
               >
                 <div
                   className={`w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 ${
-                    record.type === 'in' ? 'bg-[#E8F5E9]' : 'bg-[#FFF3E0]'
+                    record.type === 'in' ? 'bg-[#FFF0F0]' : 'bg-[#F5F5F5]'
                   }`}
                 >
                   {record.type === 'in' ? (
-                    <TrendingUp size={16} className="text-[#2E7D32]" />
+                    <TrendingUp size={16} className="text-[#D32F2F]" />
                   ) : (
-                    <ShoppingBag size={16} className="text-[#E65100]" />
+                    <ShoppingBag size={16} className="text-[#888]" />
                   )}
                 </div>
                 <div className="flex-1 min-w-0">
@@ -283,7 +284,7 @@ export default function PointsDetailPage({ onBack, onWithdraw }: PointsDetailPag
                 </div>
                 <span
                   className={`text-sm font-bold flex-shrink-0 ${
-                    record.type === 'in' ? 'text-[#2E7D32]' : 'text-[#E65100]'
+                    record.type === 'in' ? 'text-[#D32F2F]' : 'text-[#888]'
                   }`}
                 >
                   {record.type === 'in' ? '+' : ''}{record.points.toLocaleString()}
