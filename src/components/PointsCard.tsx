@@ -13,13 +13,6 @@ export default function PointsCard() {
 
         <div className="relative p-5">
           <div className="flex items-start justify-between">
-            <div>
-              <p className="text-red-100 text-xs font-medium tracking-widest mb-1">我的积分</p>
-              <div className="flex items-end gap-1.5">
-                <span className="text-5xl font-black text-white tracking-tight leading-none">10,380</span>
-                <span className="text-red-100 text-sm mb-1 font-medium">分</span>
-              </div>
-            </div>
             <button className="mt-1 flex items-center gap-1 bg-white/20 rounded-full px-3 py-1.5 text-white text-xs font-semibold backdrop-blur-sm hover:bg-white/30 transition-colors">
               <Gift size={12} />
               赚积分
