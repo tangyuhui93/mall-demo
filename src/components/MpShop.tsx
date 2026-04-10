@@ -159,7 +159,7 @@ export default function MpShop() {
 
   return (
     <div className="bg-white min-h-full">
-      <div className="bg-white px-4 pt-3 pb-3 sticky top-0 z-10 border-b border-[#E9ECEF]">
+      <div className="bg-white px-4 pt-5 pb-3 sticky top-0 z-10 border-b border-[#E9ECEF]">
         <h1 className="text-base font-bold text-[#212529] mb-2.5">积分商城</h1>
 
         <div className="bg-[#FEEBEC] border border-[#D32F2F]/15 rounded-xl px-3 py-2 flex items-center gap-2 mb-2.5">
