@@ -30,8 +30,8 @@ export default function BannerCard({ product }: BannerCardProps) {
             </div>
           </div>
           <div className="flex flex-col items-center justify-center w-[52px] h-[52px] rounded-full bg-[#FCBF49] shadow-lg border-2 border-white/20 flex-shrink-0">
-            <span className="text-[#212529] text-[8px] font-bold leading-none">9折</span>
-            <span className="text-[#212529] text-[9px] font-black leading-none mt-0.5">兑换</span>
+            <span className="text-[#212529] text-[12px] font-bold leading-none">9折</span>
+            <span className="text-[#212529] text-[12px] font-black leading-none mt-0.5">兑换</span>
           </div>
         </div>
 
