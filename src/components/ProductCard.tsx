@@ -94,7 +94,7 @@ export default function ProductCard({ product, variant = 'default' }: ProductCar
                 <span className="text-[#999] text-xs">积分</span>
               </div>
               {product.originalPoints && (
-                <span className="text-[#999] text-xs leading-tight">原{product.originalPoints.toLocaleString()} 积分 →</span>
+                <span className="text-[#999] text-xs leading-tight">原{product.originalPoints.toLocaleString()} 积分 </span>
               )}
             </div>
             <button className="flex-shrink-0 bg-gradient-to-r from-[#FF3B30] to-[#FF6B30] text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-sm shadow-red-100 hover:opacity-90 transition-opacity active:scale-95">
