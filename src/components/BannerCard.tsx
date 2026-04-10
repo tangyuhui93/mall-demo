@@ -24,7 +24,7 @@ export default function BannerCard({ product }: BannerCardProps) {
                 <Flame size={9} className="fill-white" />
                 热门
               </span>
-              <span className="flex items-center gap-1 bg-white/15 backdrop-blur-sm border border-white/25 text-[#F0F0F0] text-[10px] font-semibold px-2.5 py-0.5 rounded-md">
+              <span className="flex items-center gap-1 bg-[#F77F00] text-white text-[10px] font-semibold px-2.5 py-0.5 rounded-md">
                 限时优惠
               </span>
             </div>

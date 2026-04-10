@@ -64,7 +64,7 @@ export default function ProductCard({ product, variant = 'default' }: ProductCar
         </div>
         {product.redeemProgress !== undefined && product.stock !== undefined && (
           <div className="bg-[#212529] px-3 py-1.5 flex items-center gap-2">
-            <div className="flex-1 h-1.5 bg-[#495057] rounded-full overflow-hidden">
+            <div className="flex-1 h-1.5 bg-[#E9ECEF] rounded-full overflow-hidden">
               <div
                 className="h-full bg-[#D62828] rounded-full transition-all"
                 style={{ width: `${product.redeemProgress}%` }}
@@ -77,7 +77,7 @@ export default function ProductCard({ product, variant = 'default' }: ProductCar
         )}
         <div className="p-3">
           <p className="text-[#212529] font-bold text-sm leading-snug truncate">{product.name}</p>
-          <p className="text-[#ADB5BD] text-[11px] font-medium mt-0.5 leading-snug line-clamp-2" style={{ minHeight: '2.6em' }}>
+          <p className="text-[#495057] text-xs font-medium mt-0.5 leading-snug line-clamp-2" style={{ minHeight: '2.6em' }}>
             {product.tagline ? `"${product.tagline}"` : ''}
           </p>
           <div className="mt-2 flex items-center justify-between gap-1">
@@ -117,7 +117,7 @@ export default function ProductCard({ product, variant = 'default' }: ProductCar
       </div>
       {product.redeemProgress !== undefined && product.stock !== undefined && (
         <div className="bg-[#212529] px-3 py-1.5 flex items-center gap-2">
-          <div className="flex-1 h-1.5 bg-[#495057] rounded-full overflow-hidden">
+          <div className="flex-1 h-1.5 bg-[#E9ECEF] rounded-full overflow-hidden">
             <div
               className="h-full bg-[#D62828] rounded-full transition-all"
               style={{ width: `${product.redeemProgress}%` }}
@@ -131,7 +131,7 @@ export default function ProductCard({ product, variant = 'default' }: ProductCar
       <div className="p-3 flex flex-col flex-1">
         <div className="flex-1">
           {product.tagline && (
-            <p className="text-[#ADB5BD] text-[11px] font-medium mb-0.5 leading-snug">"{product.tagline}"</p>
+            <p className="text-[#495057] text-xs font-medium mb-0.5 leading-snug">"{product.tagline}"</p>
           )}
           <p className="text-[#212529] font-bold text-sm leading-snug truncate">{product.name}</p>
         </div>
