@@ -141,9 +141,9 @@ export default function WithdrawPage({ onBack, onGoExchange }: WithdrawPageProps
                 </p>
                 <div className="flex gap-2 mb-3">
                   {[
-                    { label: '有机蔬菜礼包', pts: '280分' },
-                    { label: '山地蜂蜜500g', pts: '350分' },
-                    { label: '冷压果汁6瓶', pts: '420分' },
+                    { label: '有机蔬菜礼包', pts: '280积分' },
+                    { label: '山地蜂蜜500g', pts: '350积分' },
+                    { label: '冷压果汁6瓶', pts: '420积分' },
                   ].map((item) => (
                     <div key={item.label} className="flex-1 bg-white/70 rounded-xl px-2 py-1.5 text-center border border-green-200/60">
                       <p className="text-[#1B5E20] text-[10px] font-semibold leading-tight">{item.label}</p>
