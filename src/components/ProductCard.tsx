@@ -135,19 +135,17 @@ export default function ProductCard({ product, variant = 'default' }: ProductCar
           <p className="text-[#1A1A1A] font-bold text-sm leading-snug truncate">{product.name}</p>
         </div>
         <div className="mt-2 flex items-center justify-between gap-1">
-          <div className="flex flex-col flex-1 min-w-0">
-            <div className="flex items-baseline gap-1 flex-wrap">
-              {product.cashAmount !== undefined && product.cashAmount > 0 && (
-                <span className="text-[#555] text-xs">{product.cashAmount}元+</span>
-              )}
-              <span className="text-[#FF3B30] font-black text-lg leading-none">{product.points.toLocaleString()}</span>
-              <span className="text-[#999] text-xs">积分</span>
-            </div>
+          <div className="flex items-baseline gap-1 flex-wrap min-w-0 flex-1">
+            {product.cashAmount !== undefined && product.cashAmount > 0 && (
+              <span className="text-[#555] text-xs">{product.cashAmount}元+</span>
+            )}
+            <span className="text-[#FF3B30] font-black text-lg leading-none">{product.points.toLocaleString()}</span>
+            <span className="text-[#999] text-xs">积分</span>
             {product.originalPrice && (
-              <span className="text-[#BBB] text-xs leading-tight line-through">价值{product.originalPrice}元</span>
+              <span className="text-[#BBB] text-xs line-through">价值{product.originalPrice}元</span>
             )}
             {product.originalPoints && (
-              <span className="text-[#CCC] text-xs line-through leading-tight">{product.originalPoints.toLocaleString()}</span>
+              <span className="text-[#CCC] text-xs line-through">{product.originalPoints.toLocaleString()}</span>
             )}
           </div>
           <button className="flex-shrink-0 bg-gradient-to-r from-[#FF3B30] to-[#FF6B30] text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-sm shadow-red-100 hover:opacity-90 transition-opacity active:scale-95">
