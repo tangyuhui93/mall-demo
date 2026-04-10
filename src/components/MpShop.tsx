@@ -3,6 +3,14 @@ import { Search, SlidersHorizontal, Star, Clock, MapPin, ShieldCheck } from 'luc
 
 const categories = ['全部', '新鲜水果', '粮油', '白酒', '日用品'];
 
+const pointsFilters = [
+  { id: 'all', label: '全部' },
+  { id: '0-500', label: '0-500' },
+  { id: '500-1000', label: '500-1000' },
+  { id: '1000-3000', label: '1000-3000' },
+  { id: '3000+', label: '3000以上' },
+];
+
 const products = [
   {
     id: 1,
@@ -149,12 +157,22 @@ function BadgeTag({ badge }: { badge: string | null }) {
 
 export default function MpShop() {
   const [activeCategory, setActiveCategory] = useState('全部');
+  const [activePoints, setActivePoints] = useState('all');
   const [search, setSearch] = useState('');
 
   const filtered = products.filter((p) => {
     const matchCat = activeCategory === '全部' || p.category === activeCategory;
     const matchSearch = p.name.includes(search);
-    return matchCat && matchSearch;
+    let matchPoints = true;
+    if (activePoints !== 'all') {
+      if (activePoints === '3000+') {
+        matchPoints = p.points >= 3000;
+      } else {
+        const [min, max] = activePoints.split('-').map(Number);
+        matchPoints = p.points >= min && p.points < max;
+      }
+    }
+    return matchCat && matchSearch && matchPoints;
   });
 
   return (
@@ -186,7 +204,7 @@ export default function MpShop() {
         </div>
       </div>
 
-      <div className="px-4 py-3">
+      <div className="px-4 pt-3 pb-1">
         <div className="flex gap-2 overflow-x-auto no-scrollbar pb-1">
           {categories.map((cat) => (
             <button
@@ -199,6 +217,25 @@ export default function MpShop() {
               }`}
             >
               {cat}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="px-4 pb-3">
+        <div className="flex gap-2 overflow-x-auto no-scrollbar pb-1">
+          {pointsFilters.map((f) => (
+            <button
+              key={f.id}
+              onClick={() => setActivePoints(f.id)}
+              className={`flex-shrink-0 px-3 py-1 rounded-full text-xs font-semibold transition-all duration-150 border ${
+                activePoints === f.id
+                  ? 'bg-[#D32F2F]/10 text-[#D32F2F] border-[#D32F2F]/40'
+                  : 'bg-white text-[#6C757D] border-[#E9ECEF]'
+              }`}
+            >
+              {f.label}
+              {f.id !== 'all' && <span className="ml-0.5 text-[10px]">积分</span>}
             </button>
           ))}
         </div>
