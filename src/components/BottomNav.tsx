@@ -7,24 +7,24 @@ interface BottomNavProps {
 
 export default function BottomNav({ activeTab, onTabChange }: BottomNavProps) {
   return (
-    <div className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[390px] bg-white border-t border-[#F0EBE3] z-50">
+    <div className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[390px] bg-[#F8F9FA] border-t border-[#E9ECEF] z-50">
       <div className="flex items-stretch">
         <NavItem active={activeTab === 'home'} onClick={() => onTabChange('home')}>
           <HomeIcon active={activeTab === 'home'} />
-          <span className={`text-xs mt-0.5 ${activeTab === 'home' ? 'font-bold text-[#FF3B30]' : 'text-[#BBA090]'}`}>首页</span>
-          {activeTab === 'home' && <span className="w-1.5 h-1.5 rounded-full bg-[#FF3B30] mt-0.5" />}
+          <span className={`text-xs mt-0.5 ${activeTab === 'home' ? 'font-bold text-[#D62828]' : 'text-[#ADB5BD]'}`}>首页</span>
+          {activeTab === 'home' && <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] mt-0.5" />}
         </NavItem>
 
         <NavItem active={activeTab === 'shop'} onClick={() => onTabChange('shop')}>
           <ShopIcon active={activeTab === 'shop'} />
-          <span className={`text-xs mt-0.5 ${activeTab === 'shop' ? 'font-bold text-[#FF3B30]' : 'text-[#BBA090]'}`}>商城</span>
-          {activeTab === 'shop' && <span className="w-1.5 h-1.5 rounded-full bg-[#FF3B30] mt-0.5" />}
+          <span className={`text-xs mt-0.5 ${activeTab === 'shop' ? 'font-bold text-[#D62828]' : 'text-[#ADB5BD]'}`}>商城</span>
+          {activeTab === 'shop' && <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] mt-0.5" />}
         </NavItem>
 
         <NavItem active={activeTab === 'profile'} onClick={() => onTabChange('profile')}>
           <ProfileIcon active={activeTab === 'profile'} />
-          <span className={`text-xs mt-0.5 ${activeTab === 'profile' ? 'font-bold text-[#FF3B30]' : 'text-[#BBA090]'}`}>我的</span>
-          {activeTab === 'profile' && <span className="w-1.5 h-1.5 rounded-full bg-[#FF3B30] mt-0.5" />}
+          <span className={`text-xs mt-0.5 ${activeTab === 'profile' ? 'font-bold text-[#D62828]' : 'text-[#ADB5BD]'}`}>我的</span>
+          {activeTab === 'profile' && <span className="w-1.5 h-1.5 rounded-full bg-[#D62828] mt-0.5" />}
         </NavItem>
       </div>
       <div className="h-safe-area-inset-bottom" style={{ height: 'env(safe-area-inset-bottom, 0px)' }} />
@@ -41,7 +41,7 @@ function NavItem({ children, onClick }: { children: React.ReactNode; active?: bo
 }
 
 function HomeIcon({ active }: { active?: boolean }) {
-  const color = active ? '#FF3B30' : '#BBA090';
+  const color = active ? '#D62828' : '#ADB5BD';
   return (
     <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -56,7 +56,7 @@ function HomeIcon({ active }: { active?: boolean }) {
 }
 
 function ShopIcon({ active }: { active?: boolean }) {
-  const color = active ? '#FF3B30' : '#BBA090';
+  const color = active ? '#D62828' : '#ADB5BD';
   return (
     <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -84,7 +84,7 @@ function ShopIcon({ active }: { active?: boolean }) {
 }
 
 function ProfileIcon({ active }: { active?: boolean }) {
-  const color = active ? '#FF3B30' : '#BBA090';
+  const color = active ? '#D62828' : '#ADB5BD';
   return (
     <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="13" cy="9" r="4" stroke={color} strokeWidth="1.7" />

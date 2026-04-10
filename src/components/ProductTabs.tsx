@@ -33,8 +33,8 @@ export default function ProductTabs() {
   return (
     <section className="mb-8">
       <div className="flex items-center gap-2 px-4 mb-3">
-        <Gift size={18} className="text-[#FF3B30]" />
-        <h2 className="text-[#1A1A1A] font-black text-base">轻松兑好礼</h2>
+        <Gift size={18} className="text-[#D62828]" />
+        <h2 className="text-[#212529] font-black text-base">轻松兑好礼</h2>
       </div>
 
       <div className="px-4 mb-3">
@@ -45,8 +45,8 @@ export default function ProductTabs() {
               onClick={() => setActiveTab(tab.id)}
               className={`flex-shrink-0 px-4 py-1.5 rounded-full text-sm font-semibold transition-all duration-200 ${
                 activeTab === tab.id
-                  ? 'bg-gradient-to-r from-[#FF3B30] to-[#FF6B30] text-white shadow-md shadow-red-100'
-                  : 'bg-white text-[#666] border border-[#F0E0D0]'
+                  ? 'bg-[#D62828] text-white shadow-sm'
+                  : 'bg-white text-[#495057] border border-[#E9ECEF]'
               }`}
             >
               {tab.label}
@@ -63,8 +63,8 @@ export default function ProductTabs() {
               onClick={() => setActivePriceFilter(filter.id)}
               className={`flex-shrink-0 px-3 py-1 rounded-full text-xs font-semibold transition-all duration-200 border ${
                 activePriceFilter === filter.id
-                  ? 'bg-[#FFF0E8] text-[#FF3B30] border-[#FFCCBB]'
-                  : 'bg-white text-[#888] border-[#F0E0D0]'
+                  ? 'bg-[#D62828]/10 text-[#D62828] border-[#D62828]/30'
+                  : 'bg-white text-[#ADB5BD] border-[#E9ECEF]'
               }`}
             >
               {filter.label}
@@ -80,7 +80,7 @@ export default function ProductTabs() {
           ))
         ) : (
           <div className="col-span-2 py-12 text-center">
-            <p className="text-[#BBB] text-sm">暂无相关商品</p>
+            <p className="text-[#ADB5BD] text-sm">暂无相关商品</p>
           </div>
         )}
       </div>
