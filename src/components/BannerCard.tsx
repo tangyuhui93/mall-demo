@@ -20,7 +20,7 @@ export default function BannerCard({ product }: BannerCardProps) {
         <div className="flex items-start justify-between">
           <div className="flex flex-col gap-1.5">
             <div className="flex items-center gap-1.5">
-              <span className="flex items-center gap-1 bg-[#D62828] text-white text-[10px] font-black px-2.5 py-0.5 rounded-md">
+              <span className="flex items-center gap-1 bg-[#D32F2F] text-white text-[10px] font-black px-2.5 py-0.5 rounded-md">
                 <Flame size={9} className="fill-white" />
                 热门
               </span>
@@ -55,7 +55,7 @@ export default function BannerCard({ product }: BannerCardProps) {
                 <span className="text-[#E0E0E0]/60 text-[11px] line-through">价值{product.originalPrice}元</span>
               )}
             </div>
-            <button className="bg-[#D62828] text-white font-black text-sm px-6 py-2.5 rounded-lg shadow-md active:scale-95 transition-transform">
+            <button className="bg-[#D32F2F] text-white font-black text-sm px-6 py-2.5 rounded-lg shadow-md active:scale-95 transition-transform">
               立即兑换
             </button>
           </div>

@@ -11,7 +11,7 @@ const tagStyles: Record<string, string> = {
   green: 'bg-[#38B000] text-white',
   teal: 'bg-[#38B000] text-white',
   gold: 'bg-[#FCBF49] text-[#212529]',
-  pink: 'bg-[#D62828] text-white',
+  pink: 'bg-[#D32F2F] text-white',
   purple: 'bg-[#9D4EDD] text-white',
 };
 
@@ -41,7 +41,7 @@ export default function ProductCard({ product, variant = 'default' }: ProductCar
                 <span className="text-[#ADB5BD] text-xs line-through">价值{product.originalPrice}元</span>
               )}
             </div>
-            <button className="bg-[#D62828] text-white text-[11px] font-bold px-4 py-1.5 rounded-lg hover:opacity-90 transition-opacity active:scale-95">
+            <button className="bg-[#D32F2F] text-white text-[11px] font-bold px-4 py-1.5 rounded-lg hover:opacity-90 transition-opacity active:scale-95">
               兑换
             </button>
           </div>
@@ -66,12 +66,12 @@ export default function ProductCard({ product, variant = 'default' }: ProductCar
           <div className="bg-[#212529] px-3 py-1.5 flex items-center gap-2">
             <div className="flex-1 h-1.5 bg-[#444444] rounded-full overflow-hidden">
               <div
-                className="h-full bg-[#D62828] rounded-full transition-all"
+                className="h-full bg-[#D32F2F] rounded-full transition-all"
                 style={{ width: `${product.redeemProgress}%` }}
               />
             </div>
             <span className="text-white text-[10px] font-bold whitespace-nowrap flex-shrink-0">
-              {product.redeemProgress}% | <span className="text-[#D62828]">剩{product.stock}件</span>
+              {product.redeemProgress}% | <span className="text-[#D32F2F]">剩{product.stock}件</span>
             </span>
           </div>
         )}
@@ -90,7 +90,7 @@ export default function ProductCard({ product, variant = 'default' }: ProductCar
                 <span className="text-[#ADB5BD] text-xs leading-tight line-through">价值{product.originalPrice}元</span>
               )}
             </div>
-            <button className="flex-shrink-0 bg-[#D62828] text-white text-xs font-bold px-4 py-1.5 rounded-lg hover:opacity-90 transition-opacity active:scale-95">
+            <button className="flex-shrink-0 bg-[#D32F2F] text-white text-xs font-bold px-4 py-1.5 rounded-lg hover:opacity-90 transition-opacity active:scale-95">
               兑换
             </button>
           </div>
@@ -119,12 +119,12 @@ export default function ProductCard({ product, variant = 'default' }: ProductCar
         <div className="bg-[#212529] px-3 py-1.5 flex items-center gap-2">
           <div className="flex-1 h-1.5 bg-[#444444] rounded-full overflow-hidden">
             <div
-              className="h-full bg-[#D62828] rounded-full transition-all"
+              className="h-full bg-[#D32F2F] rounded-full transition-all"
               style={{ width: `${product.redeemProgress}%` }}
             />
           </div>
           <span className="text-white text-[10px] font-bold whitespace-nowrap flex-shrink-0">
-            {product.redeemProgress}% | <span className="text-[#D62828]">剩{product.stock}件</span>
+            {product.redeemProgress}% | <span className="text-[#D32F2F]">剩{product.stock}件</span>
           </span>
         </div>
       )}
@@ -149,7 +149,7 @@ export default function ProductCard({ product, variant = 'default' }: ProductCar
               <span className="text-[#ADB5BD] text-xs line-through">{product.originalPoints.toLocaleString()}</span>
             )}
           </div>
-          <button className="flex-shrink-0 bg-[#D62828] text-white text-xs font-bold px-3 py-1.5 rounded-lg hover:opacity-90 transition-opacity active:scale-95">
+          <button className="flex-shrink-0 bg-[#D32F2F] text-white text-xs font-bold px-3 py-1.5 rounded-lg hover:opacity-90 transition-opacity active:scale-95">
             兑换
           </button>
         </div>

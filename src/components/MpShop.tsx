@@ -31,7 +31,7 @@ const products = [
     saveAmount: '14',
     img: 'https://images.pexels.com/photos/209339/pexels-photo-209339.jpeg?auto=compress&cs=tinysrgb&w=300',
     tag: '热门',
-    tagColor: 'bg-[#FFE8E8] text-[#D93B30]',
+    tagColor: 'bg-[#FEEBEC] text-[#B71C1C]',
     badge: 'origin',
   },
   {
@@ -91,7 +91,7 @@ const products = [
     saveAmount: '34',
     img: 'https://images.pexels.com/photos/3407777/pexels-photo-3407777.jpeg?auto=compress&cs=tinysrgb&w=300',
     tag: '限量',
-    tagColor: 'bg-[#FFE8E8] text-[#D93B30]',
+    tagColor: 'bg-[#FEEBEC] text-[#B71C1C]',
     badge: 'authentic',
   },
   {
@@ -194,7 +194,7 @@ export default function MpShop() {
               onClick={() => setActiveCategory(cat)}
               className={`flex-shrink-0 px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-150 ${
                 activeCategory === cat
-                  ? 'bg-[#FF3B30] text-white shadow-sm shadow-red-200'
+                  ? 'bg-[#D32F2F] text-white shadow-sm shadow-red-200'
                   : 'bg-white text-[#8B6050] border border-[#EDE0D4]'
               }`}
             >
@@ -244,13 +244,13 @@ export default function MpShop() {
                 </div>
                 <div className="flex items-center justify-between">
                   <div>
-                    <span className="text-[#FF3B30] text-sm font-black">{p.points.toLocaleString()}</span>
-                    <span className="text-[#FF3B30] text-xs ml-0.5">积分</span>
+                    <span className="text-[#D32F2F] text-sm font-black">{p.points.toLocaleString()}</span>
+                    <span className="text-[#D32F2F] text-xs ml-0.5">积分</span>
                     {p.originalPoints && (
                       <span className="text-[#CCC] text-xs line-through ml-1">{p.originalPoints.toLocaleString()}</span>
                     )}
                   </div>
-                  <button className="bg-gradient-to-r from-[#FF3B30] to-[#FF6B30] text-white text-[11px] px-3 py-1.5 rounded-full font-bold shadow-sm shadow-red-100 active:opacity-80 transition-opacity">
+                  <button className="bg-gradient-to-r from-[#D32F2F] to-[#B71C1C] text-white text-[11px] px-3 py-1.5 rounded-full font-bold shadow-sm shadow-red-100 active:opacity-80 transition-opacity">
                     兑换
                   </button>
                 </div>

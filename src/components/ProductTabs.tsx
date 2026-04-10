@@ -33,7 +33,7 @@ export default function ProductTabs() {
   return (
     <section className="mb-8">
       <div className="flex items-center gap-2 px-4 mb-3">
-        <Gift size={18} className="text-[#D62828]" />
+        <Gift size={18} className="text-[#D32F2F]" />
         <h2 className="text-[#212529] font-black text-base">轻松兑好礼</h2>
       </div>
 
@@ -45,7 +45,7 @@ export default function ProductTabs() {
               onClick={() => setActiveTab(tab.id)}
               className={`flex-shrink-0 px-4 py-1.5 rounded-full text-sm font-semibold transition-all duration-200 ${
                 activeTab === tab.id
-                  ? 'bg-[#D62828] text-white shadow-sm'
+                  ? 'bg-[#D32F2F] text-white shadow-sm'
                   : 'bg-white text-[#495057] border border-[#E9ECEF]'
               }`}
             >
@@ -63,7 +63,7 @@ export default function ProductTabs() {
               onClick={() => setActivePriceFilter(filter.id)}
               className={`flex-shrink-0 px-3 py-1 rounded-full text-xs font-semibold transition-all duration-200 border ${
                 activePriceFilter === filter.id
-                  ? 'bg-[#D62828]/10 text-[#D62828] border-[#D62828]/30'
+                  ? 'bg-[#D32F2F]/10 text-[#D32F2F] border-[#D32F2F]/30'
                   : 'bg-white text-[#ADB5BD] border-[#E9ECEF]'
               }`}
             >

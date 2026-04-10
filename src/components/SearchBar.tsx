@@ -14,11 +14,11 @@ export default function SearchBar() {
         </div>
         <button className="relative w-9 h-9 flex items-center justify-center rounded-full bg-[#F8F9FA] border border-[#E9ECEF]">
           <Bell size={17} className="text-[#495057]" />
-          <span className="absolute top-1 right-1.5 w-1.5 h-1.5 bg-[#D62828] rounded-full" />
+          <span className="absolute top-1 right-1.5 w-1.5 h-1.5 bg-[#D32F2F] rounded-full" />
         </button>
         <button className="relative w-9 h-9 flex items-center justify-center rounded-full bg-[#F8F9FA] border border-[#E9ECEF]">
           <ShoppingCart size={17} className="text-[#495057]" />
-          <span className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-[#D62828] rounded-full flex items-center justify-center">
+          <span className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-[#D32F2F] rounded-full flex items-center justify-center">
             <span className="text-white text-[9px] font-bold leading-none">3</span>
           </span>
         </button>

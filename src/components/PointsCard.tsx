@@ -11,12 +11,12 @@ export default function PointsCard() {
               <span className="bg-[#FCBF49] text-[#212529] text-[10px] font-black px-2 py-0.5 rounded-md">
                 9折兑换
               </span>
-              <span className="text-[#D62828] text-[10px] font-semibold">限时优惠</span>
+              <span className="text-[#D32F2F] text-[10px] font-semibold">限时优惠</span>
             </div>
             <p className="text-[#212529] font-bold text-base">农家土猪腊肉礼盒 500g</p>
             <p className="text-[#ADB5BD] text-xs mt-0.5">柴火熏制 · 产地直发</p>
             <p className="text-[#ADB5BD] text-xs line-through mt-0.5">价值128元</p>
-            <button className="mt-3 bg-[#D62828] text-white text-xs font-bold px-5 py-2 rounded-lg hover:opacity-90 transition-opacity active:scale-95">
+            <button className="mt-3 bg-[#D32F2F] text-white text-xs font-bold px-5 py-2 rounded-lg hover:opacity-90 transition-opacity active:scale-95">
               立即兑换
             </button>
           </div>

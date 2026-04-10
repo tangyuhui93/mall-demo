@@ -22,7 +22,7 @@ export default function MemberDeals() {
                 <p className="text-[#ADB5BD] text-xs font-semibold">9折大派送 · 限时特惠</p>
               </div>
             </div>
-            <button className="flex items-center gap-0.5 text-[#D62828] text-xs font-semibold">
+            <button className="flex items-center gap-0.5 text-[#D32F2F] text-xs font-semibold">
               查看更多 <span className="text-sm ml-0.5">›</span>
             </button>
           </div>
