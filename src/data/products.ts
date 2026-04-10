@@ -12,6 +12,9 @@ export const hotProducts: Product[] = [
     category: '美食',
     tag: '产地直供',
     tagColor: 'teal',
+    stock: 15,
+    redeemProgress: 85,
+    memberExclusive: true,
   },
   {
     id: 'h2',
@@ -24,6 +27,8 @@ export const hotProducts: Product[] = [
     category: '美食',
     tag: '产地直供',
     tagColor: 'teal',
+    stock: 8,
+    redeemProgress: 92,
   },
   {
     id: 'h3',
@@ -36,6 +41,8 @@ export const hotProducts: Product[] = [
     category: '美食',
     tag: '正品溯源',
     tagColor: 'gold',
+    stock: 23,
+    redeemProgress: 71,
   },
   {
     id: 'h4',
@@ -48,6 +55,9 @@ export const hotProducts: Product[] = [
     category: '美食',
     tag: '热门',
     tagColor: 'pink',
+    stock: 42,
+    redeemProgress: 58,
+    memberExclusive: true,
   },
 ];
 

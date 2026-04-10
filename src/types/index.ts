@@ -11,6 +11,9 @@ export interface Product {
   discount?: string;
   originalPoints?: number;
   savings?: number;
+  stock?: number;
+  redeemProgress?: number;
+  memberExclusive?: boolean;
 }
 
 export interface TabItem {
