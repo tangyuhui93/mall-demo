@@ -143,7 +143,7 @@ export default function ProductCard({ product, variant = 'default' }: ProductCar
             <span className="text-[#F77F00] font-black text-lg leading-none">{product.points.toLocaleString()}</span>
             <span className="text-[#ADB5BD] text-xs">积分</span>
             {product.originalPrice && (
-              <span className="text-[#ADB5BD] text-xs">价值 ¥{product.originalPrice}</span>
+              <span className="text-[#ADB5BD] text-xs line-through">价值 ¥{product.originalPrice}</span>
             )}
           </div>
           <button className="flex-shrink-0 bg-[#D32F2F] text-white text-xs font-bold px-3 py-1.5 rounded-lg hover:opacity-90 transition-opacity active:scale-95">

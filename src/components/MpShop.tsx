@@ -284,7 +284,7 @@ export default function MpShop() {
                     <span className="text-[#D32F2F] text-sm font-black">{p.points.toLocaleString()}</span>
                     <span className="text-[#D32F2F] text-xs ml-0.5">积分</span>
                     {p.originalPrice && (
-                      <div className="text-[#ADB5BD] text-[10px] leading-none mt-0.5">
+                      <div className="text-[#ADB5BD] text-[10px] line-through leading-none mt-0.5">
                         价值 ¥{p.originalPrice}
                       </div>
                     )}
