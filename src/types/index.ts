@@ -10,6 +10,7 @@ export interface Product {
   category: string;
   discount?: string;
   originalPoints?: number;
+  originalPrice?: number;
   savings?: number;
   stock?: number;
   redeemProgress?: number;

@@ -24,6 +24,7 @@ export default function PointsCard() {
             </div>
             <p className="text-[#1A1A1A] font-bold text-base">农家土猪腊肉礼盒 500g</p>
             <p className="text-[#999] text-xs mt-0.5">柴火熏制 · 产地直发</p>
+            <p className="text-[#CCC] text-xs line-through mt-0.5">价值128元</p>
             <button className="mt-3 bg-gradient-to-r from-[#FF3B30] to-[#FF6B30] text-white text-xs font-bold px-5 py-2 rounded-full shadow-md shadow-red-200 hover:opacity-90 transition-opacity active:scale-95">
               立即兑换
             </button>

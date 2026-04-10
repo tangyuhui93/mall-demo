@@ -36,8 +36,8 @@ export default function ProductCard({ product, variant = 'default' }: ProductCar
               )}
               <span className="text-[#FF3B30] font-black text-base leading-none">{product.points.toLocaleString()}</span>
               <span className="text-[#999] text-xs">积分</span>
-              {product.originalPoints && (
-                <span className="text-[#CCC] text-xs line-through">{product.originalPoints.toLocaleString()}</span>
+              {product.originalPrice && (
+                <span className="text-[#CCC] text-xs line-through">价值{product.originalPrice}元</span>
               )}
             </div>
             <button className="bg-gradient-to-r from-[#FF3B30] to-[#FF6B30] text-white text-[11px] font-bold px-4 py-1.5 rounded-full shadow-sm shadow-red-100 hover:opacity-90 transition-opacity active:scale-95">
@@ -82,8 +82,8 @@ export default function ProductCard({ product, variant = 'default' }: ProductCar
                 <span className="text-[#FF3B30] font-black text-xl leading-none">{product.points.toLocaleString()}</span>
                 <span className="text-[#999] text-xs">积分</span>
               </div>
-              {product.originalPoints && (
-                <span className="text-[#999] text-xs leading-tight">原{product.originalPoints.toLocaleString()} 积分 </span>
+              {product.originalPrice && (
+                <span className="text-[#BBB] text-xs leading-tight line-through">价值{product.originalPrice}元</span>
               )}
             </div>
             <button className="flex-shrink-0 bg-gradient-to-r from-[#FF3B30] to-[#FF6B30] text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-sm shadow-red-100 hover:opacity-90 transition-opacity active:scale-95">
