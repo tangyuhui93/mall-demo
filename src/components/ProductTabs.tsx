@@ -1,14 +1,11 @@
 import { useState } from 'react';
 import { allProducts, tabs, priceFilters } from '../data/products';
 import ProductCard from './ProductCard';
-import BannerCard from './BannerCard';
 import { Gift } from 'lucide-react';
 
 export default function ProductTabs() {
   const [activeTab, setActiveTab] = useState('all');
   const [activePriceFilter, setActivePriceFilter] = useState('all');
-
-  const featuredProduct = allProducts.find((p) => p.id === 'p1')!;
 
   const filteredProducts = allProducts.filter((p) => {
     if (p.id === 'p1') return false;
@@ -75,8 +72,6 @@ export default function ProductTabs() {
           ))}
         </div>
       </div>
-
-      <BannerCard product={featuredProduct} />
 
       <div className="px-4 grid grid-cols-2 gap-3">
         {filteredProducts.length > 0 ? (

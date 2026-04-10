@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import StatusBar from './components/StatusBar';
 import SearchBar from './components/SearchBar';
+import BannerCard from './components/BannerCard';
 import PointsCard from './components/PointsCard';
 import HotSection from './components/HotSection';
 import MemberDeals from './components/MemberDeals';
 import ProductTabs from './components/ProductTabs';
 import MpShop from './components/MpShop';
 import BottomNav from './components/BottomNav';
+import { allProducts } from './data/products';
 
 type Tab = 'home' | 'shop' | 'profile';
 
@@ -20,6 +22,7 @@ function App() {
         {activeTab === 'home' && (
           <>
             <SearchBar />
+            <BannerCard product={allProducts.find((p) => p.id === 'p1')!} />
             <PointsCard />
             <HotSection />
             <MemberDeals />
