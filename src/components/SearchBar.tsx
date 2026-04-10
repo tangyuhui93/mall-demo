@@ -2,7 +2,7 @@ import { Search, Bell, ShoppingCart } from 'lucide-react';
 
 export default function SearchBar() {
   return (
-    <div className="sticky top-0 z-50 bg-[#FFF5EC] px-4 pt-1 pb-3">
+    <div className="sticky top-0 z-50 bg-[#FFE8D0] px-4 pt-1 pb-3">
       <div className="flex items-center gap-2.5">
         <div className="flex-1 flex items-center gap-2 bg-white rounded-full px-4 py-2.5 shadow-sm border border-[#FFE8D0]">
           <Search size={15} className="text-[#FFAA5A] flex-shrink-0" />
