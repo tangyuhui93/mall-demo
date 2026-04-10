@@ -130,7 +130,7 @@ function BadgeTag({ badge }: { badge: string | null }) {
   if (!badge) return null;
   if (badge === 'origin') {
     return (
-      <div className="flex items-center gap-0.5 text-[#A06040] mt-1">
+      <div className="flex items-center gap-0.5 text-[#ADB5BD] mt-1">
         <MapPin size={9} />
         <span style={{ fontSize: 10 }}>产地直发</span>
       </div>
@@ -138,7 +138,7 @@ function BadgeTag({ badge }: { badge: string | null }) {
   }
   if (badge === 'authentic') {
     return (
-      <div className="flex items-center gap-0.5 text-[#B07820] mt-1">
+      <div className="flex items-center gap-0.5 text-[#ADB5BD] mt-1">
         <ShieldCheck size={9} />
         <span style={{ fontSize: 10 }}>正品溯源</span>
       </div>
@@ -158,30 +158,30 @@ export default function MpShop() {
   });
 
   return (
-    <div className="bg-[#FFF5EC] min-h-full">
-      <div className="bg-[#FFF8F3] px-4 pt-3 pb-3 sticky top-0 z-10 border-b border-[#F0E8DE]">
-        <h1 className="text-base font-bold text-[#1A1A1A] mb-2.5">积分商城</h1>
+    <div className="bg-white min-h-full">
+      <div className="bg-white px-4 pt-3 pb-3 sticky top-0 z-10 border-b border-[#E9ECEF]">
+        <h1 className="text-base font-bold text-[#212529] mb-2.5">积分商城</h1>
 
-        <div className="bg-[#FFF0E0] border border-[#F5DECA] rounded-xl px-3 py-2 flex items-center gap-2 mb-2.5">
-          <Clock size={13} className="text-[#E06030] flex-shrink-0" />
-          <p className="text-[#C05030] text-xs font-medium flex-1">
+        <div className="bg-[#FEEBEC] border border-[#D32F2F]/15 rounded-xl px-3 py-2 flex items-center gap-2 mb-2.5">
+          <Clock size={13} className="text-[#D32F2F] flex-shrink-0" />
+          <p className="text-[#B71C1C] text-xs font-medium flex-1">
             您有 <span className="font-bold">2,400</span> 积分将于{' '}
             <span className="font-bold">30天</span> 后过期，快去兑换好物！
           </p>
         </div>
 
         <div className="flex items-center gap-2">
-          <div className="flex-1 flex items-center gap-2 bg-[#F5EDE0] rounded-xl px-3 py-2">
-            <Search size={14} className="text-[#BBA090]" />
+          <div className="flex-1 flex items-center gap-2 bg-[#F8F9FA] rounded-full px-3 py-2 border border-[#E9ECEF]">
+            <Search size={14} className="text-[#ADB5BD]" />
             <input
-              className="bg-transparent flex-1 text-xs text-[#1A1A1A] outline-none placeholder-[#BBA090]"
+              className="bg-transparent flex-1 text-xs text-[#212529] outline-none placeholder-[#ADB5BD]"
               placeholder="搜索商品..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
             />
           </div>
-          <button className="w-9 h-9 bg-[#F5EDE0] rounded-xl flex items-center justify-center">
-            <SlidersHorizontal size={15} className="text-[#8B6050]" />
+          <button className="w-9 h-9 bg-[#F8F9FA] rounded-full border border-[#E9ECEF] flex items-center justify-center">
+            <SlidersHorizontal size={15} className="text-[#495057]" />
           </button>
         </div>
       </div>
@@ -192,10 +192,10 @@ export default function MpShop() {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`flex-shrink-0 px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-150 ${
+              className={`flex-shrink-0 px-4 py-1.5 rounded-full text-xs font-semibold transition-all duration-150 ${
                 activeCategory === cat
-                  ? 'bg-[#D32F2F] text-white shadow-sm shadow-red-200'
-                  : 'bg-white text-[#8B6050] border border-[#EDE0D4]'
+                  ? 'bg-[#D32F2F] text-white shadow-sm'
+                  : 'bg-white text-[#495057] border border-[#E9ECEF]'
               }`}
             >
               {cat}
@@ -209,7 +209,7 @@ export default function MpShop() {
           {filtered.map((p) => (
             <div
               key={p.id}
-              className="bg-white rounded-2xl overflow-hidden shadow-sm border border-[#F5EDE0] active:scale-[0.97] transition-transform"
+              className="bg-white rounded-2xl overflow-hidden shadow-sm border border-[#E9ECEF] active:scale-[0.97] transition-transform"
             >
               <div className="relative">
                 <img src={p.img} alt={p.name} className="w-full h-32 object-cover" />
@@ -227,31 +227,33 @@ export default function MpShop() {
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent px-2 py-1.5">
                     <span className="text-white" style={{ fontSize: 10 }}>
                       兑换可省约{' '}
-                      <span className="font-bold text-[#FFD700]">¥{p.saveAmount}</span>
+                      <span className="font-bold text-[#FCBF49]">¥{p.saveAmount}</span>
                     </span>
                   </div>
                 )}
               </div>
               <div className="p-3">
-                <p className="text-[#1A1A1A] text-xs font-semibold leading-tight mb-0.5 line-clamp-2">
+                <p className="text-[#212529] text-xs font-semibold leading-tight mb-0.5 line-clamp-2">
                   {p.name}
                 </p>
                 <BadgeTag badge={p.badge} />
                 <div className="flex items-center gap-1 mt-1 mb-2">
-                  <Star size={10} className="text-[#F5A623] fill-[#F5A623]" />
-                  <span className="text-[#8B6050] text-xs">{p.rating}</span>
-                  <span className="text-[#D0C0B0] text-xs">({p.reviews})</span>
+                  <Star size={10} className="text-[#FCBF49] fill-[#FCBF49]" />
+                  <span className="text-[#495057] text-xs">{p.rating}</span>
+                  <span className="text-[#ADB5BD] text-xs">({p.reviews})</span>
                 </div>
-                <div className="flex items-center justify-between">
-                  <div>
+                <div className="flex items-center justify-between gap-1">
+                  <div className="min-w-0">
                     <span className="text-[#D32F2F] text-sm font-black">{p.points.toLocaleString()}</span>
                     <span className="text-[#D32F2F] text-xs ml-0.5">积分</span>
                     {p.originalPoints && (
-                      <span className="text-[#CCC] text-xs line-through ml-1">{p.originalPoints.toLocaleString()}</span>
+                      <div className="text-[#ADB5BD] text-[10px] line-through leading-none mt-0.5">
+                        {p.originalPoints.toLocaleString()}
+                      </div>
                     )}
                   </div>
-                  <button className="bg-gradient-to-r from-[#D32F2F] to-[#B71C1C] text-white text-[11px] px-3 py-1.5 rounded-full font-bold shadow-sm shadow-red-100 active:opacity-80 transition-opacity">
-                    兑换
+                  <button className="flex-shrink-0 bg-[#D32F2F] text-white text-[11px] px-3 py-1.5 rounded-lg font-bold whitespace-nowrap active:opacity-80 transition-opacity">
+                    立即兑换
                   </button>
                 </div>
               </div>
@@ -260,7 +262,7 @@ export default function MpShop() {
         </div>
 
         {filtered.length === 0 && (
-          <div className="flex flex-col items-center justify-center py-16 text-[#BBA090]">
+          <div className="flex flex-col items-center justify-center py-16 text-[#ADB5BD]">
             <Search size={32} className="mb-3 opacity-40" />
             <p className="text-sm">暂无相关商品</p>
           </div>
