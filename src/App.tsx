@@ -14,8 +14,8 @@ function App() {
   const [activeTab, setActiveTab] = useState<Tab>('home');
 
   return (
-    <div className="min-h-screen bg-[#FFF5EC]">
-      <div className="max-w-[390px] mx-auto min-h-screen bg-[#FFF5EC] relative overflow-x-hidden shadow-2xl">
+    <div className="min-h-screen" style={{ background: 'linear-gradient(180deg, #FFF0F0 0%, #FFE6E0 100%)' }}>
+      <div className="max-w-[390px] mx-auto min-h-screen relative overflow-x-hidden shadow-2xl" style={{ background: 'linear-gradient(180deg, #FFF0F0 0%, #FFE6E0 100%)' }}>
         <StatusBar />
         {activeTab === 'home' && (
           <>
