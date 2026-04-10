@@ -229,8 +229,8 @@ export const tabs: TabItem[] = [
 
 export const priceFilters: PriceFilter[] = [
   { id: 'all', label: '全部积分' },
-  { id: '0-300', label: '0-300积分' },
-  { id: '300-1000', label: '300-1000积分' },
+  { id: '0-500', label: '0-500积分' },
+  { id: '500-1000', label: '500-1000积分' },
   { id: '1000-3000', label: '1000-3000积分' },
-  { id: '3000+', label: '3000积分+' },
+  { id: '3000+', label: '3000积分以上' },
 ];

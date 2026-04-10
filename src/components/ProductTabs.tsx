@@ -24,7 +24,7 @@ export default function ProductTabs() {
         if (p.points < 3000) return false;
       } else {
         const [min, max] = activePriceFilter.split('-').map(Number);
-        if (p.points < min || p.points > max) return false;
+        if (p.points < min || p.points >= max) return false;
       }
     }
     return true;
