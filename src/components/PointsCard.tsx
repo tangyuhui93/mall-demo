@@ -10,7 +10,6 @@ export default function PointsCard() {
         <div className="absolute top-4 right-6 opacity-40">
           <Sparkles size={40} className="text-yellow-200" />
         </div>
- 
       </div>
 
       <div className="relative rounded-3xl overflow-hidden shadow-md bg-white border border-[#FFE8D0]">
