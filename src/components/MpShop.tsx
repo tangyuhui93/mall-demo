@@ -245,7 +245,7 @@ export default function MpShop() {
                 <div className="flex items-center justify-between">
                   <div>
                     <span className="text-[#FF3B30] text-sm font-black">{p.points.toLocaleString()}</span>
-                    <span className="text-[#FF3B30] text-xs ml-0.5">分</span>
+                    <span className="text-[#FF3B30] text-xs ml-0.5">积分</span>
                     {p.originalPoints && (
                       <span className="text-[#CCC] text-xs line-through ml-1">{p.originalPoints.toLocaleString()}</span>
                     )}
