@@ -9,7 +9,7 @@ export default function PointsCard() {
           <div className="flex-1">
             <div className="flex items-center gap-1.5 mb-1.5">
               <span className="bg-[#FCBF49] text-[#212529] text-[10px] font-black px-2 py-0.5 rounded-md">
-                9折兑换
+                5折兑换
               </span>
               <span className="text-[#D32F2F] text-[10px] font-semibold">限时优惠</span>
             </div>
