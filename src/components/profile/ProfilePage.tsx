@@ -1,177 +1,224 @@
-import { useState, useEffect } from 'react';
-import { ChevronRight, Shield, FileText, Headphones, Bell, Gift, Star } from 'lucide-react';
+import { ChevronRight, MapPin, Headphones, Heart, Shield, MessageSquare, Settings } from 'lucide-react';
 
 interface ProfilePageProps {
   onOpenPoints: () => void;
 }
 
 export default function ProfilePage({ onOpenPoints }: ProfilePageProps) {
-  const [showExpireAlert, setShowExpireAlert] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setShowExpireAlert(true), 600);
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <div className="bg-[#F5F5F5] min-h-screen pb-24">
-      <div
-        className="relative px-4 pt-12 pb-6"
-        style={{
-          background: 'linear-gradient(145deg, #C62828 0%, #D32F2F 50%, #E53935 100%)',
-        }}
-      >
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-8 -right-8 w-40 h-40 rounded-full bg-white/5" />
-          <div className="absolute top-4 right-16 w-20 h-20 rounded-full bg-white/5" />
+      <div className="bg-white px-4 pt-12 pb-4">
+        <div className="flex items-center justify-between mb-5">
+          <Settings size={22} className="text-[#333]" />
+          <span className="text-[#333] text-base font-semibold">Personal Center</span>
+          <MessageSquare size={22} className="text-[#333]" />
         </div>
 
-        <div className="relative flex items-center gap-4 mb-5">
-          <div className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center border-2 border-white/40">
-            <span className="text-white text-2xl font-bold">张</span>
+        <div className="flex items-center gap-4">
+          <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-[#F0F0F0] flex-shrink-0">
+            <img
+              src="https://images.pexels.com/photos/1704488/pexels-photo-1704488.jpeg?auto=compress&cs=tinysrgb&w=200"
+              alt="avatar"
+              className="w-full h-full object-cover"
+            />
           </div>
           <div className="flex-1">
-            <div className="flex items-center gap-2">
-              <span className="text-white text-lg font-bold">张先生</span>
-              <span className="bg-[#FCBF49] text-[#7B3F00] text-[10px] font-black px-2 py-0.5 rounded-full">
-                车险用户
-              </span>
+            <div className="flex items-center gap-2 mb-0.5">
+              <span className="text-[#111] text-xl font-bold">林嘉嘉</span>
             </div>
-            <p className="text-white/70 text-xs mt-0.5">手机尾号 8899 · 已验证</p>
+            <p className="text-[#999] text-sm">车险用户 · ID: 8829402</p>
           </div>
-          <ChevronRight size={18} className="text-white/50" />
+          <ChevronRight size={18} className="text-[#CCC]" />
+        </div>
+      </div>
+
+      <div className="h-2 bg-[#F5F5F5]" />
+
+      <div className="bg-white px-4 py-4">
+        <div className="flex items-center justify-between mb-1">
+          <span className="text-[#999] text-sm">可用积分</span>
+          <button
+            onClick={onOpenPoints}
+            className="text-[#999] text-sm bg-[#F5F5F5] px-3 py-1 rounded-full"
+          >
+            明细
+          </button>
+        </div>
+
+        <div className="flex items-baseline gap-1 mb-3">
+          <span className="text-[#D32F2F] text-5xl font-black tracking-tight">12,850</span>
+          <span className="text-[#999] text-sm">分</span>
+        </div>
+
+        <div className="flex items-center gap-2 bg-[#FFF0F0] rounded-lg px-3 py-2 mb-4 border border-[#FFCDD2]">
+          <div className="w-4 h-4 rounded-full bg-[#D32F2F] flex items-center justify-center flex-shrink-0">
+            <span className="text-white text-[9px] font-black">!</span>
+          </div>
+          <span className="text-[#D32F2F] text-xs">您的200积分将于3月31日过期，请尽快使用</span>
         </div>
 
         <button
           onClick={onOpenPoints}
-          className="relative w-full rounded-2xl overflow-hidden active:scale-[0.98] transition-transform"
-          style={{
-            background: 'linear-gradient(135deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.08) 100%)',
-            border: '1px solid rgba(255,255,255,0.25)',
-            backdropFilter: 'blur(10px)',
-          }}
+          className="w-full bg-[#D32F2F] text-white font-bold py-3.5 rounded-xl flex items-center justify-center gap-2 active:opacity-90 transition-opacity"
         >
-          <div className="p-4">
-            <div className="flex items-start justify-between">
-              <div>
-                <div className="flex items-center gap-1.5 mb-1">
-                  <Star size={12} className="text-[#FCBF49]" fill="#FCBF49" />
-                  <span className="text-white/80 text-xs">我的积分</span>
-                </div>
-                <div className="flex items-baseline gap-1">
-                  <span className="text-white text-4xl font-black tracking-tight">3,280</span>
-                  <span className="text-white/60 text-sm">分</span>
-                </div>
-                <div className="flex items-center gap-1 mt-1">
-                  <span className="text-[#FCBF49] text-sm font-bold">可抵 ¥32.8</span>
-                  <span className="text-white/50 text-xs">用于购物</span>
-                </div>
-              </div>
-              <div className="text-right">
-                <div className="bg-[#FCBF49] text-[#7B3F00] text-xs font-bold px-3 py-1.5 rounded-xl mb-2 whitespace-nowrap">
-                  去兑换 →
-                </div>
-                <p className="text-white/50 text-[10px]">点击查看详情</p>
-              </div>
-            </div>
-
-            <div
-              className={`mt-3 flex items-center gap-2 rounded-xl px-3 py-2 transition-all duration-500 ${
-                showExpireAlert
-                  ? 'bg-red-900/40 border border-red-400/40 opacity-100 translate-y-0'
-                  : 'opacity-0 translate-y-1'
-              }`}
-            >
-              <div className="w-1.5 h-1.5 rounded-full bg-[#FF6B6B] animate-pulse flex-shrink-0" />
-              <span className="text-[#FF9999] text-xs font-medium">
-                <span className="font-bold text-[#FFAAAA]">320分</span> 将在 <span className="font-bold text-[#FFAAAA]">12天</span>后过期，用掉比较划算
-              </span>
-            </div>
-          </div>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M9 12h6M12 9v6M3 6h18M3 6l2 14h14L21 6M3 6l2-3h14l2 3" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+          积分商城
         </button>
       </div>
 
-      <div className="mx-4 -mt-2 mb-4">
-        <div className="bg-white rounded-2xl p-4 shadow-sm">
-          <div className="flex items-center justify-between mb-3">
-            <span className="text-[#212529] text-sm font-bold">我的保单</span>
-            <span className="text-[#D32F2F] text-xs flex items-center gap-0.5">全部 <ChevronRight size={12} /></span>
-          </div>
-          <div className="bg-[#FFF5F5] rounded-xl p-3 border border-[#FFD5D5]">
-            <div className="flex items-start justify-between">
-              <div>
-                <div className="flex items-center gap-2 mb-1">
-                  <Shield size={14} className="text-[#D32F2F]" />
-                  <span className="text-[#212529] text-sm font-semibold">机动车交强险</span>
-                  <span className="bg-[#E8F5E9] text-[#2E7D32] text-[10px] font-bold px-2 py-0.5 rounded-full">保障中</span>
-                </div>
-                <p className="text-[#6C757D] text-xs">沪A·8899 · 2025年保单</p>
-                <p className="text-[#6C757D] text-xs mt-0.5">到期日：2026-03-15</p>
-              </div>
-              <div className="text-right">
-                <p className="text-[#D32F2F] text-xs font-semibold">返积分</p>
-                <p className="text-[#212529] text-sm font-bold">+3,280</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div className="h-2 bg-[#F5F5F5]" />
 
-      <div className="mx-4 mb-4">
-        <div className="bg-white rounded-2xl p-4 shadow-sm">
-          <div className="grid grid-cols-4 gap-2">
-            {[
-              { icon: <Gift size={20} />, label: '抽奖', badge: '今日3次', color: '#D32F2F' },
-              { icon: <Star size={20} />, label: '兑换商品', badge: '热门', color: '#E65100' },
-              { icon: <Bell size={20} />, label: '消息通知', badge: null, color: '#1565C0' },
-              { icon: <Headphones size={20} />, label: '客服', badge: null, color: '#2E7D32' },
-            ].map((item, i) => (
-              <button
-                key={i}
-                onClick={i < 2 ? onOpenPoints : undefined}
-                className="flex flex-col items-center gap-1.5 active:scale-95 transition-transform"
-              >
-                <div
-                  className="relative w-12 h-12 rounded-xl flex items-center justify-center"
-                  style={{ background: `${item.color}15` }}
-                >
-                  <span style={{ color: item.color }}>{item.icon}</span>
-                  {item.badge && (
-                    <span className="absolute -top-1 -right-1 bg-[#D32F2F] text-white text-[9px] font-bold px-1.5 py-0.5 rounded-full whitespace-nowrap">
-                      {item.badge}
-                    </span>
-                  )}
-                </div>
-                <span className="text-[#495057] text-[11px] font-medium">{item.label}</span>
-              </button>
-            ))}
-          </div>
+      <div className="bg-white px-4 py-4">
+        <div className="flex items-center justify-between mb-4">
+          <span className="text-[#111] text-sm font-bold">我的订单</span>
+          <button className="text-[#999] text-xs flex items-center gap-0.5">
+            全部订单 <ChevronRight size={12} />
+          </button>
         </div>
-      </div>
 
-      <div className="mx-4 mb-4">
-        <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
+        <div className="grid grid-cols-5 gap-1">
           {[
-            { icon: <FileText size={18} className="text-[#6C757D]" />, label: '理赔记录', sub: '查看历史理赔' },
-            { icon: <Shield size={18} className="text-[#6C757D]" />, label: '续保提醒', sub: '距到期还有156天' },
-            { icon: <Headphones size={18} className="text-[#6C757D]" />, label: '联系客服', sub: '7×24小时在线' },
+            { label: '待付款', icon: <PayIcon />, badge: null },
+            { label: '待发货', icon: <ShipIcon />, badge: null },
+            { label: '待收货', icon: <TruckIcon />, badge: 2 },
+            { label: '评价', icon: <StarIcon />, badge: null },
+            { label: '售后', icon: <AfterIcon />, badge: null },
           ].map((item, i) => (
-            <button
-              key={i}
-              className="w-full flex items-center gap-3 px-4 py-3.5 border-b border-[#F5F5F5] last:border-0 active:bg-[#F8F9FA] transition-colors"
-            >
-              <div className="w-8 h-8 rounded-lg bg-[#F8F9FA] flex items-center justify-center flex-shrink-0">
+            <button key={i} className="flex flex-col items-center gap-2 active:opacity-70">
+              <div className="relative">
                 {item.icon}
+                {item.badge && (
+                  <span className="absolute -top-1.5 -right-1.5 bg-[#D32F2F] text-white text-[9px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
+                    {item.badge}
+                  </span>
+                )}
               </div>
-              <div className="flex-1 text-left">
-                <p className="text-[#212529] text-sm font-medium">{item.label}</p>
-                <p className="text-[#ADB5BD] text-xs">{item.sub}</p>
-              </div>
-              <ChevronRight size={16} className="text-[#CED4DA]" />
+              <span className="text-[#555] text-xs">{item.label}</span>
             </button>
           ))}
         </div>
       </div>
+
+      <div className="h-2 bg-[#F5F5F5]" />
+
+      <div className="bg-white">
+        <div className="px-4 pt-4 pb-1">
+          <span className="text-[#111] text-sm font-bold">常用工具</span>
+        </div>
+
+        {[
+          { icon: <MapPin size={18} className="text-[#888]" />, label: '收货地址' },
+          { icon: <Headphones size={18} className="text-[#888]" />, label: '联系客服 / 售后' },
+          { icon: <Heart size={18} className="text-[#888]" />, label: '我的收藏' },
+          { icon: <Shield size={18} className="text-[#888]" />, label: '隐私设置' },
+        ].map((item, i) => (
+          <button
+            key={i}
+            className="w-full flex items-center gap-3 px-4 py-3.5 border-t border-[#F0F0F0] active:bg-[#F8F8F8] transition-colors"
+          >
+            <div className="w-5 flex items-center justify-center">{item.icon}</div>
+            <span className="flex-1 text-left text-[#333] text-sm">{item.label}</span>
+            <ChevronRight size={16} className="text-[#CCC]" />
+          </button>
+        ))}
+      </div>
+
+      <div className="h-2 bg-[#F5F5F5]" />
+
+      <div className="px-4 py-4 grid grid-cols-2 gap-3">
+        <button className="relative overflow-hidden rounded-2xl h-40 active:opacity-90 transition-opacity text-left">
+          <img
+            src="https://images.pexels.com/photos/1000445/pexels-photo-1000445.jpeg?auto=compress&cs=tinysrgb&w=400"
+            alt="新品"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10" />
+          <div className="absolute inset-0 p-3.5 flex flex-col justify-between">
+            <div>
+              <p className="text-white/60 text-[9px] font-semibold tracking-widest uppercase">Limited Edition</p>
+              <p className="text-white text-lg font-black leading-tight mt-0.5">春季新品</p>
+            </div>
+            <button className="self-start bg-white/20 border border-white/30 text-white text-xs font-semibold px-4 py-1.5 rounded-full backdrop-blur-sm">
+              立即查看
+            </button>
+          </div>
+        </button>
+
+        <button
+          onClick={onOpenPoints}
+          className="relative overflow-hidden rounded-2xl h-40 active:opacity-90 transition-opacity text-left"
+          style={{ background: 'linear-gradient(145deg, #C62828 0%, #E53935 100%)' }}
+        >
+          <div className="absolute -bottom-4 -right-4 w-28 h-28 rounded-full bg-white/10" />
+          <div className="absolute -bottom-8 right-8 w-20 h-20 rounded-full bg-white/5" />
+          <div className="absolute bottom-2 right-2 opacity-20">
+            <svg width="64" height="64" viewBox="0 0 64 64" fill="white">
+              <path d="M32 8C18.7 8 8 18.7 8 32s10.7 24 24 24 24-10.7 24-24S45.3 8 32 8zm0 4c11.1 0 20 8.9 20 20s-8.9 20-20 20S12 43.1 12 32s8.9-20 20-20zm0 6c-7.7 0-14 6.3-14 14s6.3 14 14 14 14-6.3 14-14-6.3-14-14-14zm-2 6h4v8h6v4H30V24z"/>
+            </svg>
+          </div>
+          <div className="absolute inset-0 p-3.5 flex flex-col justify-between">
+            <div>
+              <p className="text-white/70 text-[9px] font-semibold tracking-widest uppercase">Gift Guide</p>
+              <p className="text-white text-lg font-black leading-tight mt-0.5">会员福利</p>
+            </div>
+            <button className="self-start bg-white text-[#D32F2F] text-xs font-bold px-4 py-1.5 rounded-full">
+              抢先领取
+            </button>
+          </div>
+        </button>
+      </div>
     </div>
+  );
+}
+
+function PayIcon() {
+  return (
+    <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+      <rect x="3" y="7" width="24" height="18" rx="2" stroke="#555" strokeWidth="1.6"/>
+      <path d="M3 12h24" stroke="#555" strokeWidth="1.6"/>
+      <rect x="7" y="16" width="6" height="3" rx="1" fill="#555"/>
+    </svg>
+  );
+}
+
+function ShipIcon() {
+  return (
+    <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+      <rect x="2" y="9" width="16" height="14" rx="1.5" stroke="#555" strokeWidth="1.6"/>
+      <path d="M18 13h4l4 5v5h-8V13z" stroke="#555" strokeWidth="1.6" strokeLinejoin="round"/>
+      <circle cx="8" cy="23" r="2.5" fill="white" stroke="#555" strokeWidth="1.5"/>
+      <circle cx="22" cy="23" r="2.5" fill="white" stroke="#555" strokeWidth="1.5"/>
+    </svg>
+  );
+}
+
+function TruckIcon() {
+  return (
+    <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+      <path d="M4 8h16v12H4z" stroke="#555" strokeWidth="1.6" strokeLinejoin="round"/>
+      <path d="M20 12h4l2 4v4h-6V12z" stroke="#555" strokeWidth="1.6" strokeLinejoin="round"/>
+      <circle cx="9" cy="22" r="2" fill="white" stroke="#555" strokeWidth="1.5"/>
+      <circle cx="23" cy="22" r="2" fill="white" stroke="#555" strokeWidth="1.5"/>
+      <path d="M7 14h8" stroke="#555" strokeWidth="1.4" strokeLinecap="round"/>
+    </svg>
+  );
+}
+
+function StarIcon() {
+  return (
+    <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+      <path d="M15 5l2.8 6.2 6.7.6-5 4.7 1.5 6.6L15 20l-6 3.1 1.5-6.6-5-4.7 6.7-.6z" stroke="#555" strokeWidth="1.6" strokeLinejoin="round"/>
+    </svg>
+  );
+}
+
+function AfterIcon() {
+  return (
+    <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+      <circle cx="15" cy="15" r="10" stroke="#555" strokeWidth="1.6"/>
+      <path d="M15 9v6l4 3" stroke="#555" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
   );
 }
