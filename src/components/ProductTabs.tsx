@@ -55,24 +55,6 @@ export default function ProductTabs() {
         </div>
       </div>
 
-      <div className="px-4 mb-4">
-        <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-hide">
-          {priceFilters.map((filter) => (
-            <button
-              key={filter.id}
-              onClick={() => setActivePriceFilter(filter.id)}
-              className={`flex-shrink-0 px-3 py-1 rounded-full text-xs font-semibold transition-all duration-200 border ${
-                activePriceFilter === filter.id
-                  ? 'bg-[#D32F2F]/10 text-[#D32F2F] border-[#D32F2F]/30'
-                  : 'bg-white text-[#ADB5BD] border-[#E9ECEF]'
-              }`}
-            >
-              {filter.label}
-            </button>
-          ))}
-        </div>
-      </div>
-
       <div className="px-4 grid grid-cols-2 gap-3">
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product) => (
