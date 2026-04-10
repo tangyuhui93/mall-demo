@@ -10,7 +10,7 @@ export const hotProducts: Product[] = [
     originalPoints: 1200,
     originalPrice: 68,
     savings: 24,
-    image: '/19fb09a636d6664f4d7d99491fe3eb92.jpg',
+    image: 'https://images.pexels.com/photos/1510392/pexels-photo-1510392.jpeg?auto=compress&cs=tinysrgb&w=400',
     category: '美食',
     tag: '产地直供',
     tagColor: 'teal',
