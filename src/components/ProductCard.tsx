@@ -129,10 +129,10 @@ export default function ProductCard({ product, variant = 'default' }: ProductCar
       )}
       <div className="p-3 flex flex-col flex-1">
         <div className="flex-1">
-          <p className="text-[#1A1A1A] font-bold text-sm leading-snug line-clamp-2">{product.name}</p>
           {product.tagline && (
-            <p className="text-[#FF8C00] text-[11px] font-medium mt-0.5 leading-snug italic">"{product.tagline}"</p>
+            <p className="text-[#FF8C00] text-[11px] font-medium mb-0.5 leading-snug italic">"{product.tagline}"</p>
           )}
+          <p className="text-[#1A1A1A] font-bold text-sm leading-snug line-clamp-2">{product.name}</p>
         </div>
         <div className="mt-2 flex items-center justify-between gap-1">
           <div className="flex flex-col flex-1 min-w-0">
