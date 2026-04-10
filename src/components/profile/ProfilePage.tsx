@@ -24,7 +24,7 @@ export default function ProfilePage({ onOpenPoints }: ProfilePageProps) {
           </div>
           <div className="flex-1">
             <div className="flex items-center gap-2 mb-0.5">
-              <span className="text-[#111] text-xl font-bold">林嘉嘉</span>
+              <span className="text-[#111] text-xl font-bold">张三</span>
             </div>
             <p className="text-[#999] text-sm">车险用户 · ID: 8829402</p>
           </div>
