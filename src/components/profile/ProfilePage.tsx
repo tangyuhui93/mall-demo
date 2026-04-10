@@ -10,7 +10,7 @@ export default function ProfilePage({ onOpenPoints }: ProfilePageProps) {
       <div className="bg-white px-4 pt-12 pb-4">
         <div className="flex items-center justify-between mb-5">
           <Settings size={22} className="text-[#333]" />
-          <span className="text-[#333] text-base font-semibold">Personal Center</span>
+          <span className="text-[#333] text-base font-semibold">个人中心</span>
           <MessageSquare size={22} className="text-[#333]" />
         </div>
 
