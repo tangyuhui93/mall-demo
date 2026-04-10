@@ -115,11 +115,6 @@ export default function ProductCard({ product, variant = 'default' }: ProductCar
             {product.discount}
           </span>
         )}
-        {product.savings && (
-          <div className="absolute bottom-2 left-2 bg-black/45 backdrop-blur-sm rounded-full px-2 py-0.5">
-            <span className="text-[#FFD700] text-[10px] font-bold">省约 ¥{product.savings}</span>
-          </div>
-        )}
       </div>
       <div className="p-3">
         <p className="text-[#1A1A1A] font-bold text-sm leading-snug line-clamp-2 min-h-[2.5rem]">{product.name}</p>
