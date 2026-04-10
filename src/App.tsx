@@ -24,7 +24,6 @@ function App() {
             <SearchBar />
             <BannerCard product={allProducts.find((p) => p.id === 'p1')!} />
             <HotSection />
-            <ProductTabs />
           </>
         )}
         {activeTab === 'shop' && <MpShop />}
