@@ -64,13 +64,13 @@ export default function ProductCard({ product, variant = 'default' }: ProductCar
         </div>
         {product.redeemProgress !== undefined && product.stock !== undefined && (
           <div className="bg-[#212529] px-3 py-1.5 flex items-center gap-2">
-            <div className="flex-1 h-1.5 bg-[#E9ECEF] rounded-full overflow-hidden">
+            <div className="flex-1 h-1.5 bg-[#444444] rounded-full overflow-hidden">
               <div
                 className="h-full bg-[#D62828] rounded-full transition-all"
                 style={{ width: `${product.redeemProgress}%` }}
               />
             </div>
-            <span className="text-[#F8F9FA] text-[10px] font-bold whitespace-nowrap flex-shrink-0">
+            <span className="text-white text-[10px] font-bold whitespace-nowrap flex-shrink-0">
               {product.redeemProgress}% | <span className="text-[#D62828]">剩{product.stock}件</span>
             </span>
           </div>
@@ -117,13 +117,13 @@ export default function ProductCard({ product, variant = 'default' }: ProductCar
       </div>
       {product.redeemProgress !== undefined && product.stock !== undefined && (
         <div className="bg-[#212529] px-3 py-1.5 flex items-center gap-2">
-          <div className="flex-1 h-1.5 bg-[#E9ECEF] rounded-full overflow-hidden">
+          <div className="flex-1 h-1.5 bg-[#444444] rounded-full overflow-hidden">
             <div
               className="h-full bg-[#D62828] rounded-full transition-all"
               style={{ width: `${product.redeemProgress}%` }}
             />
           </div>
-          <span className="text-[#F8F9FA] text-[10px] font-bold whitespace-nowrap flex-shrink-0">
+          <span className="text-white text-[10px] font-bold whitespace-nowrap flex-shrink-0">
             {product.redeemProgress}% | <span className="text-[#D62828]">剩{product.stock}件</span>
           </span>
         </div>
