@@ -11,6 +11,7 @@ export interface Product {
   discount?: string;
   originalPoints?: number;
   originalPrice?: number;
+  tagline?: string;
   savings?: number;
   stock?: number;
   redeemProgress?: number;
