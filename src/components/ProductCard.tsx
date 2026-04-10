@@ -60,12 +60,6 @@ export default function ProductCard({ product, variant = 'default' }: ProductCar
               {product.tag}
             </span>
           )}
-          {product.memberExclusive && product.savings && (
-            <div className="absolute top-2 right-2 flex flex-col items-center justify-center w-11 h-11 rounded-full bg-gradient-to-br from-[#FFB800] to-[#FF8C00] shadow-md border-2 border-white/30">
-              <span className="text-white text-[7px] font-bold leading-tight">会员专享</span>
-              <span className="text-white text-[8px] font-black leading-tight">省¥{product.savings}</span>
-            </div>
-          )}
           {product.savings && !product.memberExclusive && (
             <div className="absolute bottom-2.5 left-2.5 bg-black/50 backdrop-blur-sm rounded-full px-2 py-0.5">
               <span className="text-[#FFD700] text-[11px] font-bold">省约 ¥{product.savings}</span>
