@@ -14,6 +14,8 @@ export interface Product {
   stock?: number;
   redeemProgress?: number;
   memberExclusive?: boolean;
+  redeemedCount?: string;
+  todayLabel?: string;
 }
 
 export interface TabItem {

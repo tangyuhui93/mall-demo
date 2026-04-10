@@ -15,6 +15,8 @@ export const hotProducts: Product[] = [
     stock: 15,
     redeemProgress: 85,
     memberExclusive: true,
+    redeemedCount: '2547',
+    todayLabel: '今日特惠',
   },
   {
     id: 'h2',
@@ -25,10 +27,12 @@ export const hotProducts: Product[] = [
     savings: 33,
     image: 'https://images.pexels.com/photos/33783/olive-oil-salad-dressing-cooking-olive.jpg?auto=compress&cs=tinysrgb&w=400',
     category: '美食',
-    tag: '产地直供',
+    tag: '积分优选',
     tagColor: 'teal',
     stock: 8,
     redeemProgress: 92,
+    redeemedCount: '1.6万+',
+    todayLabel: '今日热抢',
   },
   {
     id: 'h3',
@@ -43,6 +47,8 @@ export const hotProducts: Product[] = [
     tagColor: 'gold',
     stock: 23,
     redeemProgress: 71,
+    redeemedCount: '892',
+    todayLabel: '今日特惠',
   },
   {
     id: 'h4',
@@ -58,6 +64,8 @@ export const hotProducts: Product[] = [
     stock: 42,
     redeemProgress: 58,
     memberExclusive: true,
+    redeemedCount: '3.2万+',
+    todayLabel: '今日特惠',
   },
 ];
 
