@@ -99,7 +99,7 @@ export default function ProductCard({ product, variant = 'default' }: ProductCar
   }
 
   return (
-    <div className="rounded-3xl overflow-hidden bg-white shadow-sm border border-[#F5EDE0] hover:shadow-md transition-shadow active:scale-[0.98]">
+    <div className="rounded-3xl overflow-hidden bg-white shadow-sm border border-[#F5EDE0] hover:shadow-md transition-shadow active:scale-[0.98] flex flex-col">
       <div className="relative bg-[#FFF5EC] overflow-hidden" style={{ aspectRatio: '4/3' }}>
         <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent" />
@@ -114,17 +114,38 @@ export default function ProductCard({ product, variant = 'default' }: ProductCar
           </span>
         )}
       </div>
-      <div className="p-3">
-        <p className="text-[#1A1A1A] font-bold text-sm leading-snug line-clamp-2 min-h-[2.5rem]">{product.name}</p>
+      {product.redeemProgress !== undefined && product.stock !== undefined && (
+        <div className="bg-gradient-to-r from-[#8B4513] to-[#A0522D] px-3 py-1.5 flex items-center gap-2">
+          <div className="flex-1 h-1.5 bg-white/20 rounded-full overflow-hidden">
+            <div
+              className="h-full bg-gradient-to-r from-[#FFD700] to-[#FFA500] rounded-full transition-all"
+              style={{ width: `${product.redeemProgress}%` }}
+            />
+          </div>
+          <span className="text-white text-[10px] font-bold whitespace-nowrap flex-shrink-0">
+            兑换进度 {product.redeemProgress}% | <span className="text-[#FFD700]">仅剩 {product.stock} 件</span>
+          </span>
+        </div>
+      )}
+      <div className="p-3 flex flex-col flex-1">
+        <div className="flex-1">
+          <p className="text-[#1A1A1A] font-bold text-sm leading-snug line-clamp-2">{product.name}</p>
+          {product.tagline && (
+            <p className="text-[#FF8C00] text-[11px] font-medium mt-0.5 leading-snug italic">"{product.tagline}"</p>
+          )}
+        </div>
         <div className="mt-2 flex items-center justify-between gap-1">
           <div className="flex flex-col flex-1 min-w-0">
-            <div className="flex items-baseline gap-1">
+            <div className="flex items-baseline gap-1 flex-wrap">
               {product.cashAmount !== undefined && product.cashAmount > 0 && (
                 <span className="text-[#555] text-xs">{product.cashAmount}元+</span>
               )}
               <span className="text-[#FF3B30] font-black text-lg leading-none">{product.points.toLocaleString()}</span>
               <span className="text-[#999] text-xs">积分</span>
             </div>
+            {product.originalPrice && (
+              <span className="text-[#BBB] text-xs leading-tight line-through">价值{product.originalPrice}元</span>
+            )}
             {product.originalPoints && (
               <span className="text-[#CCC] text-xs line-through leading-tight">{product.originalPoints.toLocaleString()}</span>
             )}
