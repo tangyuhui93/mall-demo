@@ -38,7 +38,7 @@ export const hotProducts: Product[] = [
     id: 'h3',
     name: '酱香型白酒 53度 500ml',
     description: '贵州茅台镇 窖藏5年',
-    tagline: '喝一口，下属都开始叫你领导',
+    tagline: '开会前喝，发言自带回响效果',
     points: 2200,
     originalPoints: 2600,
     originalPrice: 198,
