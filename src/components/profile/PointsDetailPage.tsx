@@ -100,14 +100,14 @@ export default function PointsDetailPage({ onBack, onWithdraw }: PointsDetailPag
           <div className="flex items-baseline justify-center gap-2 mb-2">
             <span className="text-white text-6xl font-black tracking-tight">3,280</span>
           </div>
-          <div className="flex items-center justify-center gap-3">
-            <div className="flex items-center gap-1 bg-white/15 rounded-full px-3 py-1">
-              <Star size={11} className="text-[#D32F2F]" fill="#D32F2F" />
-              <span className="text-white text-xs">可抵 <span className="font-bold text-white">¥32.8</span></span>
+          <div className="flex items-center justify-center gap-2">
+            <div className="flex items-center gap-1 bg-white/20 rounded-full px-3 py-1">
+              <Star size={11} className="text-white" fill="white" />
+              <span className="text-white text-xs">可抵 <span className="font-bold">¥32.8</span></span>
             </div>
-            <div className="flex items-center gap-1 bg-red-900/40 border border-red-400/30 rounded-full px-3 py-1">
-              <div className="w-1.5 h-1.5 rounded-full bg-[#FF6B6B] animate-pulse" />
-              <span className="text-[#FFAAAA] text-xs">320分 · 12天后过期</span>
+            <div className="flex items-center gap-1 bg-white/20 rounded-full px-3 py-1">
+              <div className="w-1.5 h-1.5 rounded-full bg-white/70 animate-pulse" />
+              <span className="text-white text-xs">320分 · 12天后过期</span>
             </div>
           </div>
         </div>
