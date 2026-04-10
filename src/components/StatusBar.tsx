@@ -1,6 +1,6 @@
 export default function StatusBar() {
   return (
-    <div className="flex items-center justify-between px-5 pt-2 pb-1 bg-[#FFE8D0]">
+    <div className="flex items-center justify-between px-5 pt-2 pb-1 bg-[#fff]">
       <span className="text-[#1A1A1A] text-[13px] font-semibold tracking-tight">15:57</span>
       <div className="flex items-center gap-1.5">
         <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
