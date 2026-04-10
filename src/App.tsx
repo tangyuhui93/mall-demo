@@ -23,7 +23,6 @@ function App() {
           <>
             <SearchBar />
             <BannerCard product={allProducts.find((p) => p.id === 'p1')!} />
-            <PointsCard />
             <HotSection />
             <MemberDeals />
             <ProductTabs />
