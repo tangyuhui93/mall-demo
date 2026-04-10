@@ -7,7 +7,7 @@ interface BannerCardProps {
 
 export default function BannerCard({ product }: BannerCardProps) {
   return (
-    <div className="mx-4 mb-4 rounded-2xl overflow-hidden shadow-md border border-[#E9ECEF] relative bg-[#1A1A1A]" style={{ minHeight: 200 }}>
+    <div className="mt-4 mx-4 mb-4 rounded-2xl overflow-hidden shadow-md border border-[#E9ECEF] relative bg-[#1A1A1A]" style={{ minHeight: 200 }}>
       <img
         src={product.image}
         alt={product.name}
