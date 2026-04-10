@@ -95,7 +95,7 @@ export default function PointsDetailPage({ onBack, onWithdraw }: PointsDetailPag
 
         <div className="relative px-4 text-center pb-4">
           <div className="flex items-baseline justify-center gap-1 mb-1">
-            <span className="text-white/70 text-sm">当前积分</span>
+            <span className="text-white/10 text-sm">当前积分</span>
           </div>
           <div className="flex items-baseline justify-center gap-2 mb-2">
             <span className="text-white text-6xl font-black tracking-tight">3,280</span>
