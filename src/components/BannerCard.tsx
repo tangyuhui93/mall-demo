@@ -53,7 +53,7 @@ export default function BannerCard({ product }: BannerCardProps) {
                 <span className="text-white/70 text-xs font-medium">积分</span>
               </div>
               {product.originalPoints && (
-                <span className="text-white/40 text-[11px] line-through">原 {product.originalPoints.toLocaleString()} 积分</span>
+                <span className="text-white/40 text-[11px] line-through">价值268元</span>
               )}
             </div>
             <button className="relative overflow-hidden bg-gradient-to-r from-[#FF3B30] to-[#FF6040] text-white font-black text-sm px-6 py-2.5 rounded-2xl shadow-lg shadow-red-900/40 active:scale-95 transition-transform border border-white/10">
