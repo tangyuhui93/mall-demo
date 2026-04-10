@@ -59,7 +59,7 @@ const products = [
   },
   {
     id: 4,
-    name: '花生油礼盒 2瓶装 1.8L×2',
+    name: '猪油 2瓶装 1.8L×2',
     points: 1280,
     originalPoints: 1500,
     category: '粮油',
