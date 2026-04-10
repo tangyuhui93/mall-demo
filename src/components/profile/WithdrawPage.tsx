@@ -165,25 +165,6 @@ export default function WithdrawPage({ onBack, onGoExchange }: WithdrawPageProps
         </div>
       )}
 
-      <div className="mx-4 mb-4">
-        <div className="bg-white rounded-2xl p-4 shadow-sm">
-          <div className="flex items-center justify-between mb-3">
-            <span className="text-[#212529] text-sm font-bold">提现到</span>
-          </div>
-          <div className="flex items-center gap-3 p-3 bg-[#F8F9FA] rounded-xl border border-[#E9ECEF]">
-            <div className="w-10 h-10 rounded-xl bg-[#1DB954]/10 flex items-center justify-center flex-shrink-0">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#07C160">
-                <path d="M8.077 2c-3.297 0-6 2.703-6 6.077 0 1.792.757 3.396 1.962 4.538L2 20l7.385-2.038a6.077 6.077 0 1 0-1.308-11.962zM16 8c0-3.314-2.686-6-6-6S4 4.686 4 8a5.989 5.989 0 0 0 2.077 4.538L4 20l7.923-2.538A5.99 5.99 0 0 0 16 14a6 6 0 0 0 0-6z"/>
-              </svg>
-            </div>
-            <div className="flex-1">
-              <p className="text-[#212529] text-sm font-semibold">微信钱包</p>
-              <p className="text-[#ADB5BD] text-xs">尾号 8899 · 已绑定</p>
-            </div>
-            <span className="text-[#ADB5BD] text-xs">更换</span>
-          </div>
-        </div>
-      </div>
 
       <div className="mx-4">
         <button
