@@ -3,14 +3,14 @@ import { Product, TabItem, PriceFilter } from '../types';
 export const hotProducts: Product[] = [
   {
     id: 'h1',
-    name: '新疆哈密蜜瓜 2个装',
-    description: '瓜农直发 清甜多汁',
-    tagline: '甜到你怀疑人生，但人生值得',
+    name: '红富士苹果礼盒 5kg',
+    description: '陕西洛川 脆甜多汁',
+    tagline: '普通到没有打农药',
     points: 980,
     originalPoints: 1200,
     originalPrice: 68,
     savings: 24,
-    image: 'https://images.pexels.com/photos/5945755/pexels-photo-5945755.jpeg?auto=compress&cs=tinysrgb&w=400',
+    image: 'https://images.pexels.com/photos/1510392/pexels-photo-1510392.jpeg?auto=compress&cs=tinysrgb&w=400',
     category: '美食',
     tag: '产地直供',
     tagColor: 'teal',
