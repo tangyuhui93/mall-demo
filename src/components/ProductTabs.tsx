@@ -34,7 +34,7 @@ export default function ProductTabs() {
     <section className="mb-8">
       <div className="flex items-center gap-2 px-4 mb-3">
         <Gift size={18} className="text-[#FF3B30]" />
-        <h2 className="text-[#1A1A1A] font-black text-base">轻分兑好礼</h2>
+        <h2 className="text-[#1A1A1A] font-black text-base">轻松兑好礼</h2>
       </div>
 
       <div className="px-4 mb-3">
