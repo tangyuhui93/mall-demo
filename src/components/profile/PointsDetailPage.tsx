@@ -87,7 +87,7 @@ export default function PointsDetailPage({ onBack, onWithdraw }: PointsDetailPag
           <span className="text-white text-lg font-bold flex-1">我的积分</span>
           <button
             onClick={onWithdraw}
-            className="text-white/60 text-xs px-3 py-1.5 rounded-full border border-white/20 active:bg-white/10"
+            className="text-white text-xs px-3 py-1.5 rounded-full border border-white/60 bg-white/15 active:bg-white/25"
           >
             提现
           </button>
